@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// 判断一个字符串是不是一个回文字符串
+			// var str = '12321'
+			// function huiwen(str){
+			// 	var restr = str.split('').reverse().join('');
+			// 	if(str===restr){
+			// 		return true
+			// 	}else{
+			// 		return false
+			// 	}
+			// }
+			// console.log(huiwen(str))
+		
+		// holle-world 格式转驼峰格式 holleWorld
+			// 1. es5
+				// var str = 'holle-world-sxq';
+				// function strChange(str){
+				// 	var arr = str.split('-');
+				// 	var newstr = arr[0]
+				// 	for(var i=0;i<arr.length;i++){
+				// 		if(i!=0){
+				// 			var before = arr[i].split('')[0];
+				// 			var after = before.toUpperCase()
+				// 			newstr+=arr[i].replace(before,after)
+				// 		}
+				// 	}
+				// 	return newstr;
+				// }
+				// console.log(strChange2(str))
+			// 2. reduce
+				// let str = "my_name_is_sxq";
+				// let result = str.split('').reduce((p,n,i,arr)=>{
+				// 	if(n=='_'){
+				// 		arr[i+1] = arr[i+1].toUpperCase()
+				// 		return p
+				// 	}
+				// 	return p + n
+				// })
+				// console.log(result)
+			// 3. 正则
+				// let ze = /_(\w)/g
+				// let result = str.replace(ze,function(_,c){
+				// 	console.log(_,c)
+				// 	return c.toUpperCase()
+				// })
+				// console.log(result)
+			// 4. 正则封装 vue源码
+				// function cached (fn) {
+				//     var cache = Object.create(null);
+				//     return (function cachedFn (str) {
+				//       var hit = cache[str];
+				//       return hit || (cache[str] = fn(str))
+				//     })
+				// }
+				// var camelizeRE = /_(\w)/g;
+				// var camelize = cached(function (str) {
+				//     return str.replace(camelizeRE, function (_, c) { 
+				//     	console.log(_,c)
+				//     	return c ? c.toUpperCase() : ''; })
+				// });
+				// console.log(camelize(str))
+
+		// 判断字符串出现次数最多的字符 及 次数
+			// es5
+				// let str = "http://www.yunjianit.com";
+				// function word(str){
+				// 	let obj = {};
+				// 	let num = 0;
+				// 	let key = [];
+				// 	for(var i=0;i<str.length;i++){
+				// 		let strs = str[i]
+				// 		if(!obj[strs]){
+				// 			obj[strs] = 1;
+				// 		}else{
+				// 			obj[strs]++
+				// 		}
+				// 	}
+				// 	for(var i in obj){
+				// 		if(num<obj[i]){
+				// 			num = obj[i]
+				// 		}
+				// 	}
+				// 	for(var i in obj){
+				// 		if(obj[i]==num){
+				// 			key.push(i)
+				// 		}
+				// 	}
+				// 	return "出现次数最多的字符为"+key.join('和')+"，出现次数为"+num+"次。"
+				// }
+				// console.log(word(str))
+			// reduce
+				// let str = "http://www.yunjianit.com";
+				// let result = str.split('').reduce((prev,item,index,arr)=>{
+				// 	if(prev[item]){
+				// 		prev[item]++
+				// 	}else{
+				// 		prev[item] = 1
+				// 	}
+				// 	return prev
+				// },{})
+				// console.log(result)
+
+		// 写一个程序打印 1 到 100 这些数字，遇到数字为 3 的倍数，打印 “A” 替代该数字；遇到 5 的倍数，用 “B” 代替；遇到即是 3 的倍数又是 5 的倍数，打印 “AB”。
+			// 1. 打印 字符串
+				// function num(){
+				// 	let str = "";
+				// 	let a;
+				// 	for(var i=1;i<=100;i++){
+				// 		if(i%3==0&&i%5==0){
+				// 			a = "AB "
+				// 		}else if(i%3==0){
+				// 			a = "A "
+				// 		}else if(i%5==0){
+				// 			a = "B "
+				// 		}else{
+				// 			a = i+" "
+				// 		}
+				// 		str+=a;
+				// 	}
+				// 	return str;
+				// }
+				// console.log(num())
+			// 2. 打印 数组
+				// function num1(){
+				// 	let arr = [];
+				// 	let a;
+				// 	for(var i=1;i<=100;i++){
+				// 		if(i%3==0&&i%5==0){
+				// 			a = "AB"
+				// 		}else if(i%3==0){
+				// 			a = "A"
+				// 		}else if(i%5==0){
+				// 			a = "B"
+				// 		}else{
+				// 			a = i
+				// 		}
+				// 		arr.push(a);
+				// 	}
+				// 	return arr;
+				// }
+				// console.log(num())
+
+		// 给定线段 1(x1,y1)(x2,y2) 和 2(x3,y3)(x4,y4) 求线段交点
+			// let line1 = [{x1:0,y1:1},{x2:0,y2:-1}];
+			// let line2 = [{x3:0,y3:-1},{x4:2,y4:1}];
+			// function point(line1,line2){
+			//     let [{x1,y1},{x2,y2}] = line1;
+			// 	let [{x3,y3},{x4,y4}] = line2;
+			// 	let k1 = (y1-y2)/(x1-x2);
+			// 	let b1 = y1 - (k1*x1);
+			// 	let k2 = (y3-y4)/(x3-x4);
+			// 	let b2 = y3 - (k2*x3);
+			// 	let a;
+			// 	let b;
+			// 	if(x1==x2){
+			// 		k1,b1 = 0;
+			// 		a = x1;
+			// 		b = k2*a + b2;
+			// 	}
+			// 	if(x3==x4){
+			// 		k2,b2 = 0;
+			// 		a = x3;
+			// 		b = k1*a + b1;
+			// 	}
+			// 	if(((a>x1&&a<x2)||(a<x1&&a>x2)||a==x1||a==x2)&&((a>x3&&a<x4)||(a<x3&&a>x4)||a==x3||a==x4)&&x1!=x2&&x3!=x4){
+			// 		a = (b2-b1)/(k1-k2);
+			// 		b = k1*a + b1;
+			// 	}
+			// 	let str;
+			// 	if(a!==undefined&&b!==undefined){
+			// 		str = `交点为(${a},${b})`
+			// 	}else if((k1==k2)&&(b1==b2)&&(((x1==x3)&&(x2==x4))||((x1==x4)&&(x2==x3)))){
+			// 		str = "两线段重合"
+			// 	}else if(k1==k2){
+			// 		str = "两线段平行"
+			// 	}else{
+			// 		str = "两线段不相交"
+			// 	}
+			// 	return str;
+			// }
+			// console.log(point(line1,line2))
+
+		// 斐波那契数列
+			// 递归
+				// function numArr(num){
+				// 	if(num==1||num==2){
+				// 		return 1;
+				// 	}
+				// 	let nums = numArr(num-1)+numArr(num-2)
+				// 	return nums
+				// }
+				// console.log(numArr(6),arr)
+			// 非递归
+				// let a = 1;
+				// let b = 1;
+				// let c;
+				// let num = 5;
+				// let arr = [a,b];
+				// for(var i=0;i<num-2;i++){
+				// 	c = a+b;
+				// 	arr.push(c)
+				// 	a = b;
+				// 	b = c;
+				// }
+				// console.log(c,arr)
+
+		// 考察this
+			// var length = 10;
+			// function fn() {
+			//   console.log(this.length);
+			// }
+			// var obj = {
+			//   length: 5,
+			//   method: function(fn) {
+			//     fn();
+			//     arguments[0]();
+			//   }
+			// };
+			// obj.method(fn, 1); 
+			// 10
+			// 2
+			// 第一个是因为函数的this指向全局window
+			// 第二个指向arguments
+
+		// JavaScript中如何检测一个变量是一个String类型？请写出函数实现
+			// typeof(obj) === "string"
+			// typeof obj === "string"
+			// obj.constructor === String
+
+		// 检测数据类型
+			// typeof
+			// instanceof
+			// constroctor
+			// Object.prototype.toString.call()
+
+
+
+	</script>
+</body>
+</html>

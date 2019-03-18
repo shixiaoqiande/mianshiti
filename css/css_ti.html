@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+
+	/* 清除浮动 */
+		/*.div1,.div2{
+			width: 100%;
+			background: pink;
+			outline: 1px solid #fff;
+		}
+		.left,.right{
+			height: 30px;
+			background: #fff;
+			float: left;
+		}
+		.right{
+			float: right;
+		}*/
+		/* 1 父级添加after和zoom */
+			/*.div1:after{
+				display: block;
+				clear: both;
+				content: "";
+				visibility: hidden;
+				height: 0;
+			}*/
+
+		/* 2 结尾添加空 div */
+			/*.kong{
+				clear:both;
+			}*/
+
+		/* 3 父级加 height */
+			/*.div1{
+				height: 30px;
+			}*/
+
+		/* 4 父级 overflow: hidden */
+			/*.div1{
+				overflow: hidden;
+			}*/
+
+		/* 5 父级 overflow: auto */
+			/*.div1{
+				overflow: auto;
+			}*/
+		
+		/* 6 父级也添加浮动 */
+			/*.div1{
+				float: left;
+			}*/
+
+		/* 7 父级 display: table */
+			/*.div1{
+				display: table;
+			}*/
+
+		/* 8 结尾添加 br */
+			/*br{
+				clear: both;
+			}*/
+
+	/* 不知道宽高的盒子居中*/
+		/*.parent{
+			width: 300px;
+			height: 300px;
+			background: pink;
+			margin: 0 auto;
+		}*/
+		/* 1 父级使用弹性盒子 */
+			/*.parent{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}*/
+
+		/* 2 子级变成行内块 */
+			/*.parent{
+				text-align: center;
+				line-height: 300px;
+			}
+			.child{
+				display: inline-block;
+			}*/
+
+		/* 3 定位*/
+			/*.parent{
+				position: relative;
+			}
+			.child{
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+			}*/
+
+		/* 4 display: table */
+			/*.parent{
+				display: table;
+				text-align: center;
+			}
+			.child{
+				display: table-cell;
+				vertical-align: middle;
+			}*/
+
+	</style>
+</head>
+<body>
+	<!-- 清除浮动 https://www.cnblogs.com/nxl0908/p/7245460.html -->
+		<!-- 1. 父级div定义伪类 after 和 zoom -->
+			<!-- <div class="div1">
+				<div class="left">left</div>
+				<div class="right">right</div>
+			</div>
+			<div class="div2">div2</div> -->
+
+		<!-- 2. 在结尾处添加空 div 并 clear:both -->
+			<!-- <div class="div1">
+				<div class="left">left</div>
+				<div class="right">right</div>
+				<div class="kong"></div>
+			</div>
+			<div class="div2">div2</div> -->
+
+		<!-- 3. 父级 div 定义 height -->
+			<!-- <div class="div1">
+				<div class="left">left</div>
+				<div class="right">right</div>
+			</div>
+			<div class="div2">div2</div> -->
+
+		<!-- 4. 父级 div 加 overflow:hidden -->
+			<!-- <div class="div1">
+				<div class="left">left</div>
+				<div class="right">right</div>
+			</div>
+			<div class="div2">div2</div> -->
+
+		<!-- 5. 父级 div 加 overflow:auto -->
+			<!-- <div class="div1">
+				<div class="left">left</div>
+				<div class="right">right</div>
+			</div>
+			<div class="div2">div2</div> -->
+
+		<!-- 6. 父级 div 也添加浮动 -->
+			<!-- <div class="div1">
+				<div class="left">left</div>
+				<div class="right">right</div>
+			</div>
+			<div class="div2">div2</div> -->
+
+		<!-- 7. 父级 div 定义 display:table -->
+			<!-- <div class="div1">
+				<div class="left">left</div>
+				<div class="right">right</div>
+			</div>
+			<div class="div2">div2</div> -->
+
+		<!-- 8. 结尾处加 br 并 clear:both -->
+			<!-- <div class="div1">
+				<div class="left">left</div>
+				<div class="right">right</div>
+				<br />
+			</div>
+			<div class="div2">div2</div> -->
+
+	<!-- 不知道宽高的 div 居中 -->
+		<!-- <div class="parent">
+			<div class="child">sxq</div>
+		</div> -->
+
+	<!-- 弹性盒子 http://www.runoob.com/css3/css3-flexbox.html -->
+
+	<!-- position 参数 -->
+		<!-- relative 相对定位 相对于其正常位置进行定位。
+		absolute 绝对定位 相对于 static 定位以外的第一个父元素进行定位。
+		fixed 绝对定位 相对于浏览器窗口进行定位。
+		inherit 从父元素继承 position 的值
+		initial 
+		static 默认值
+		sticky
+		unset -->
+
+	<!-- css 优先级 -->
+		<!-- !importent>行内(inline)>id>父级class>doubleClass>元素class>class>标签 -->
+
+</body>
+</html>

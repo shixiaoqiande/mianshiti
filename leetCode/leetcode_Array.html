@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// 一、 从排序数组中删除重复项
+			// 给定一个排序数组，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。不要使用额外的数组空间，你必须在原地修改输入数组并在使用 O(1) 额外空间的条件下完成。
+				let nums = [1,0,1,0,2,0,3,2,3,4,5,6,6,7,8]
+			// 1.
+				// var removeDuplicates = function(nums) {
+				//     nums = Array.from(new Set(nums));
+				//     return nums.length;
+				// };
+			// 2.
+				// var removeDuplicates = function(nums){
+				// 	for(var i=0;i<nums.length;i++){
+				// 		for(var j=i+1;j<nums.length;j++){
+				// 			if(nums[i]===nums[j]){
+				// 				nums.splice(i,1)
+				// 			}
+				// 		}
+				// 	}
+				// 	return nums.length;
+				// }
+			// 3.
+				
+				console.log(removeDuplicates(nums))
+
+		// 
+			// var arr = [2,7,11,15];
+			// var target = 9;
+			// var twoSum = function(arr, target) {
+			// 	// let numarr = []
+	  		//   for(var i=0;i<arr.length;i++){
+	    	//		for(var j=i+1;j<arr.length;j++){
+	    	//			if(arr[i]+arr[j]==target){
+	    	//				// numarr.push(i,j)
+	    	//				return [i,j]
+	    	//				console.log(`[${arr[i]},${arr[j]}][${i},${j}]`)
+	    	//				// arr.splice(i,1,undefined)
+	    	//				// arr.splice(j,1,undefined)
+	    	//			}
+	    	//		}
+	    	//	}
+	    	//	// return numarr
+			// };
+			// console.log(twoSum(arr,target))
+
+		// 
+			// let l1 = "(2 -> 4 -> 3)";
+			// let l2 = "(5 -> 6 -> 4)";
+			// var addTwoNumbers = function(l1, l2) {
+			// 	// l1 = parseInt(l1.slice(1,-1).split(' -> ').reverse().join(''));
+			// 	// l2 = parseInt(l2.slice(1,-1).split(' -> ').reverse().join(''));
+			// 	// let num = [l1+l2].join().split('').reverse().join(' -> ')
+			// 	console.log(typeof l1)
+			// }
+			// addTwoNumbers(l1, l2)
+
+		// 
+			// var arr = [1,2,3,4,5,6,7];
+			// var k = 3;
+			// for(var i=0;i<k;i++){
+			// 	var arr1 = arr.slice(-1);
+			// 	console.log(arr1)
+			// 	arr.pop();
+			// 	arr.unshift(arr1[0]);
+			// }
+			// console.log(arr)
+			// 
+			// var arr = [1,2,3,4,5,6,7];
+			// var k = 3;
+			// for(var i=0;i<k;i++){
+			// 	var newarr = arr.splice(-1,1);
+			// 	arr.splice(0,0,newarr[0])
+			// }
+			// console.log(arr)
+			// var arr = [1,2,3,4,5,6,7];
+			// var k = 3;
+			// for(var i=0;i<k;i++){
+			// 	var newarr = arr.splice(-1,1);
+			// 	arr.unshift(newarr[0])
+			// }
+			// console.log(arr)
+			// var arr = [1,2,3,4,5,6,7];
+			// var k = 3;
+			// var newarr = arr.reverse().splice(0,k).reverse();
+			// arr.unshift(...newarr)
+			// console.log(arr)
+		
+		// 
+			// var nums = [1,1,2];
+			// nums = Array.from(new Set(nums));
+			// console.log(nums)
+
+			// var nums = [1,1,2];
+			// var newnums = []
+			// for(var i=0;i<nums.length;i++){
+			// 	if(i=0){
+			// 		newnums.push(nums[i])
+			// 	}
+			// 	for(var j=0;j<newnums.length;j++){
+			// 		if(nums[i]==newnums[j]){
+			// 			// continue
+			// 		}
+			// 	}
+			// 	newnums.push(nums[i])
+			// }
+			// console.log(newnums)
+
+
+
+	</script>
+</body>
+</html>

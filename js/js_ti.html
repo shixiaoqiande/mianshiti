@@ -240,8 +240,171 @@
 			// constroctor
 			// Object.prototype.toString.call()
 
+		// 树林里有一群猴子，每天自然死一只，猎人一天杀一半，第六天时，只剩下了一只猴子，原来一共有多少只猴子。
+			// function hou(last,day){
+			// 	while(day!=1){
+			// 		last = last*2 + 1
+			// 		day--
+			// 	}
+			// 	return last;
+			// }
+			// console.log(hou(1,6))
 
+		// 对象转换
+			// var obj = {
+			// 	"name": {
+			// 	    "type": "string",
+			// 	    "desc": "病人姓名",
+			// 	    "testData": "张三李四",
+			// 	    "sex": {
+			// 	        "type": "object",  // 这里的type为object
+			// 	        "desc": "性别",    // 如果同级的type为object,需要删除这个字段
+			// 	        "testData": "男",   // 如果同级的type为object,需要删除这个字段
+			// 	        "city": {
+			// 	            "type": "string",
+			// 	            "desc": "城市",
+			// 	            "testData": "杭州"
+			// 	        },
+			// 	        "street": {
+			// 	            "type": "string",
+			// 	            "desc": "街道",
+			// 	            "testData": "浦口街道"
+			// 	        }
+			// 	    }
+			// 	},
+			// 	"order": {
+			// 	    "type": "string",
+			// 	    "desc": "订单",
+			// 	    "testData": "名称"
+			// 	}
+			// }
+			// Object.entries 遍历对象 返回一个二维数组
+			// var obj = { foo: 'bar', baz: 42 };
+			// console.log(Object.entries(obj)); // [ ['foo', 'bar'], ['baz', 42] ]
+			// function a(obj){
+			// 	let _obj = {};
+			//     if(obj['type']&&obj['type']==='object'){
+			//         let items={},flag=false;
+			//         Object.entries(obj).forEach(([key, value]) => {
+			//             if (key==='type') {
+			//                 _obj[key] = value
+			//             } else if(typeof(value)==='object'){
+			//                 flag=true;
+			//                 items[key]=a(value);
+			//             }
+			//         })
+			//         if(flag){
+			//             _obj['items'] = items;
+			//         }
+			//     }else{
+			//         Object.entries(obj).forEach(([key, value]) => {
+			//             if (typeof(value)!=='object') {
+			//                 _obj[key] = value
+			//             } else {
+			//                 _obj[key]=a(value);
+			//             }
+			//         })
+			//     }
+			//     return _obj
+			// }
+			// console.log(a(obj))
 
+		// 生命周期
+			// 用 keep-alive 包裹
+			// activited 激活
+			// deactivated 禁用
+			// 什么时候发请求 宜早不宜迟
+				// created
+			// 监听数据改变
+				// updated
+			// 页面加载后改变
+				// mounted
+			
+		// 捕获异常的方法
+			// try catch finally
+			// try { 
+		        // ...  throw "...";
+		    // }
+		    // catch(err) {
+		    //     message.innerHTML = "输入的值 " + err;
+		    // }
+		    // finally {
+		    //     document.getElementById("demo").value = "";
+		    // }
+		    
+		// 事件轮询
+			// js 的三大主线程 
+				// GUI渲染主线程 视图层
+				// js执行主线程 js逻辑
+				// 事件监听主线程 事件监听 
+				// 一遍一遍的查看事件
+				
+		// === 和 ==
+			// == 判断之前会先转换数据类型
+				// 转换规则
+					// 如果两个操作数有且仅有一个是数字，就转为数字。
+					// 如果两个操作数有且仅有一个是布尔，就转为数字。
+					// 如果两个操作数有且仅有一个是对象，就转为值类型（toString）。
+					
+		// 如何判断一个数组是否为空数组
+			// length 
+			// pop
+			// push
+
+		// 数组合并同类项
+			// var a = [
+			// 	["03-12", "33.87"],
+			// 	["03-15", "34.67"],
+			// 	["03-18", "1.13"],
+			// 	["03-18", "1.00"],
+			// 	["03-18", "1.00"]
+			// ]
+			// function getArr(arr){
+			// 	let obj = {}
+			// 	arr.map(item=>{
+			// 		if(!obj[item[0]]){
+			// 			obj[item[0]] = item[1]*1
+			// 		}else{
+			// 			obj[item[0]] += item[1]*1
+			// 		}
+			// 	})
+			// 	return Object.entries(obj)
+			// }
+			// console.log(getArr(a))
+		// for循环嵌套定时器
+			// 先放在任务队列里 set1 set2 set3 set4 set5
+			// for(var i=0;i<5;i++){
+			// 	setTimeout(function(){
+			// 		var date = new Date()
+			// 		console.log(i,date.getTime())
+			// 	},1000) // 5 5 5 5 5
+			// }
+			// 时间间隔 不超过10毫秒 是执行代码差出来的
+			// for(let i=0;i<5;i++){ // 作用域
+			// 	console.log(i)
+			// 	setTimeout(function(){
+			// 		console.log(i)
+			// 	},1000) // 0 1 2 3 4
+			// }
+			for(i=0;i<5;i++){ // 函数传参
+				(function(i){
+					var i = i
+					setTimeout(function(){
+						console.log(i)
+					},1000)
+				})(i)
+			}
+			
+		// js事件流模型
+			// 捕获 冒泡 dom事件流（捕获+冒泡）
+		// vue跳转
+			// router $router
+		// 小程序跳转
+			// 
+		// 同步异步区别
+			// 执行顺序
+			// 异步不需要等待
+		// es6的map和对象的区别
 	</script>
 </body>
 </html>

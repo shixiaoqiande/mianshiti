@@ -371,6 +371,7 @@
 			// 	return Object.entries(obj)
 			// }
 			// console.log(getArr(a))
+		
 		// for循环嵌套定时器
 			// 先放在任务队列里 set1 set2 set3 set4 set5
 			// for(var i=0;i<5;i++){
@@ -386,14 +387,14 @@
 			// 		console.log(i)
 			// 	},1000) // 0 1 2 3 4
 			// }
-			for(i=0;i<5;i++){ // 函数传参
-				(function(i){
-					var i = i
-					setTimeout(function(){
-						console.log(i)
-					},1000)
-				})(i)
-			}
+			// for(i=0;i<5;i++){ // 函数传参
+			// 	(function(i){
+			// 		var i = i
+			// 		setTimeout(function(){
+			// 			console.log(i)
+			// 		},1000)
+			// 	})(i)
+			// }
 			
 		// js事件流模型
 			// 捕获 冒泡 dom事件流（捕获+冒泡）

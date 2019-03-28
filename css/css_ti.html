@@ -99,7 +99,17 @@
 				top: 50%;
 				left: 50%;
 				transform: translate(-50%,-50%);
-			}*/
+			}
+			.child{
+				margin: auto;
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				transform: translate(-50%,-50%);
+			}
+			*/
 
 		/* 4 display: table */
 			/*.parent{
@@ -110,7 +120,6 @@
 				display: table-cell;
 				vertical-align: middle;
 			}*/
-
 	</style>
 </head>
 <body>
@@ -181,19 +190,126 @@
 	<!-- 弹性盒子 http://www.runoob.com/css3/css3-flexbox.html -->
 
 	<!-- position 参数 -->
-		<!-- relative 相对定位 相对于其正常位置进行定位。
-		absolute 绝对定位 相对于 static 定位以外的第一个父元素进行定位。
-		fixed 绝对定位 相对于浏览器窗口进行定位。
-		inherit 从父元素继承 position 的值
-		initial 
-		static 默认值
-		sticky
-		unset -->
+		<!-- 
+			relative 相对定位 相对于其正常位置进行定位。
+			absolute 绝对定位 相对于 static 定位以外的第一个父元素进行定位。
+			fixed 绝对定位 相对于浏览器窗口进行定位。
+			inherit 从父元素继承 position 的值
+			initial 
+			static 默认值
+			sticky
+			unset 
+		-->
 
 	<!-- css 优先级 -->
-		<!-- !importent>行内(inline)>id>父级class>doubleClass>元素class>class>标签 -->
+		<!-- 
+			行内>交叉>ID>类名=属性=伪类>标签=伪元素>通用>浏览器默认样式>继承样式
+			后代和子类都比交叉高
+			它们之间的比较是通过父级和后代或者子级的选择器相加哪个更高哪个优先级就高
+		 -->
 
 	<!-- 重绘和重排区别 -->
 		<!-- 重排一定会导致重绘 -->
+
+	<!-- 透明效果 -->
+			<!-- 
+				rgba() 不会继承
+				opacity 会继承
+				transparent 透明的
+				hsla 参数分别代表色调（0-360）、饱和度（0%-100%）、亮度（0%-100%）和透明度（0-1）
+			-->
+
+	<!-- css hack 在不同浏览器的兼容 -->
+		<!--  -->
+
+	<!-- px 和 em 区别 -->
+		<!-- 
+				px像素（Pixel）相对长度单位 像素px是相对于显示器屏幕分辨率而言的
+			em 是相对长度单位 相对于当前对象内文本的字体尺寸。如当前对行内文本的字体尺寸未被人为设置，则相对于浏览器的默认字体尺寸。
+				任意浏览器的默认字体高都是16px。所有未经调整的浏览器都符合: 1em=16px。那么12px=0.75em,10px=0.625em。为了简化font-size的换算，需要在css中的body选择器中声明Font-size=62.5%，这就使em值变为 16px*62.5%=10px, 这样12px=1.2em, 10px=1em, 也就是说只需要将你的原来的px数值除以10，然后换上em作为单位就行了。
+			px
+				“绝对尺寸”（并非真正的绝对）
+				1. IE无法调整那些使用px作为单位的字体大小；
+				2. 国外的大部分网站能够调整的原因在于其使用了em或rem作为字体单位；
+				3. Firefox能够调整px和em，rem，但是96%以上的中国网民使用IE浏览器(或内核)。
+			em
+				1. em的值并不是固定的；
+				2. em会继承父级元素的字体大小。
+			rem
+				相对于根元素
+		-->
+
+	<!-- display:none和visibility:hidden（元素隐藏）两者的区别 -->
+		<!-- 
+			display:none 占据空间消失 后代也会隐藏
+			visibility:hidden 占据空间不会消失 后代会继承，但是如果给子元素设置visibility: visible，还是会显示 不会影响计数器计数
+		 -->
+	
+	<!-- 让浮动的元素垂直居中 -->
+		<!-- 
+			可以清除浮动 然后就跟之前那个不知道宽高的盒子居中的问题一样了
+		 -->
+
+	<!-- overflow:hidden 为什么可以清除浮动 -->
+		<!-- BFC 块级格式化上下文
+			和我们的页面平行的一个空间
+			触发 BFC 的
+				overflow:hidden
+				position:absolute/feixd...
+				float:left/right
+			触发后会将元素丢入BFC中，BFC中的所有元素都是标准流内部的
+		-->
+
+	<!-- !DOMTYPE -->
+		<!-- 用于告知浏览器该以何种模式来渲染文档 -->
+
+	<!-- 严格模式与混杂模式 -->
+		<!-- 
+			严格模式：又称标准模式，是指浏览器按照 W3C 标准解析代码。
+				按照浏览支持的最高标准执行
+
+			混杂模式：又称怪异模式或兼容模式，是指浏览器用自己的方式解析代码。
+				主要用于兼容
+		 -->
+
+	<!-- HTML 与 XHTML的区别 -->
+		<!--  -->
+
+	<!-- translation 和 动画的区别 -->
+		<!--  -->
+
+	<!-- 处理1px的方法 -->
+
+	<!-- 调用css时，用link 和 @import url 有什么区别 -->
+		<!-- 
+			link 会在页面显示之前加载完全
+			@import url() 在读取完文件之后加载 所以可能页面加载的瞬间会有闪烁 容易出现兼容问题
+			使用js操作dom时只能用link 因为@import不是dom可以控制的
+			link 还可以 定义rel连接属性 加载 rss  @import只能加载css
+		 -->
+
+	<!-- 盒模型 -->
+		<!-- 
+			box-sizing
+				border-box 边框盒子 border+padding+content
+				content-box content
+		 -->
+
+	<!-- absolute的containing block计算方式跟正常流有什么不同 -->
+		<!-- 
+			不占位
+		 -->
+
+	<!-- 动画属性和动画序列 -->
+	 	<!-- 动画属性animation
+	 	动画序列@keyframes -->
+
+	<!-- 什么是外边距重叠？重叠的结果是什么？ -->
+		<!-- 
+			水平没有 垂直会重叠
+			两个相邻的外边距都是正数时，折叠结果是它们两者之间较大的值。
+			两个相邻的外边距都是负数时，折叠结果是两者绝对值的较大值。
+			两个外边距一正一负时，折叠结果是两者的相加的和。
+		 -->
 </body>
 </html>

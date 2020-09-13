@@ -1,0 +1,370 @@
+@import url("style.css")/*tpa=http://www.lenzhi.com/template/default/css/style.css*/;
+@import url("pscroll.css")/*tpa=http://www.lenzhi.com/template/default/css/pscroll.css*/;
+/*内页*/
+.o_big{ overflow:hidden; background-repeat:no-repeat; background-position:center; background-size:auto 100%; position:relative;}
+.o_big .imgs{ width:100%;filter: Alpha(Opacity=0);opacity: 0;}
+.o_big .o_big_con{ position:absolute; width:100%; height:100%; left:0; top:0;}
+.o_big .o_big_con .wrap{ text-align:right; position:relative; height:100%;}
+.o_big .o_big_con img{ height:100%;}
+
+.postions{ height:41px; line-height:41px; overflow:hidden; background:#f1f1f1;  color:#919191; font-size:12px;}
+.postions a{color:#919191; }
+.postions a:Hover{ color:#00bfdb;}
+/*分页*/
+.yema{ width:100%; text-align:center; clear:both; overflow:hidden; padding-top:40px; padding-bottom:40px; clear:both;}
+.yema a{ display:inline-block; height:26px; line-height:26px; padding-left:10px; overflow:hidden; padding-right:10px; min-width:12px;margin-left:1px; margin-right:1px;  text-align:center; color:#757575; font-size:13px; border:1px solid #efefef; background-color:#fff;}
+.yema a:hover{ text-decoration:none; color:#fff; background-color:#0d816a;border:1px solid #0d816a;}
+.yema a.on{color:#fff; background-color:#0d816a; border:1px solid #0d816a;}
+.yema a.first,.yema a.last{ margin-right:0; }
+.yema a.first:hover,.yema a.last:hover{background-color:#0d816a;}
+/*关于我们*/
+.about_t{ width:96%; max-width:1200px; margin:0 auto; text-align:center; color:#949494; margin-top:3%;}
+.about_t  span{ display:block; color:#e4e4e4; text-transform:uppercase;letter-spacing:3px;}
+.about_t h2{ font-weight:blod; background:url("../images/i_bg1.png")/*tpa=http://www.lenzhi.com/template/default/images/i_bg1.png*/ center bottom no-repeat; color:#332b28;padding-bottom:20px; margin-bottom:15px; letter-spacing:2px; margin-top:-2.4%;}
+.about_t p{ font-size:12px; letter-spacing:1px;}
+.about_t label{ display:block;}
+.about_a{ margin:0 auto; text-align:center; width:96%; max-width:1200px; overflow:hidden; margin-top:3%; margin-bottom:1%;}
+.about_a a{ display:inline-block; padding-left:3%; padding-right:3%; margin-left:2.5%; margin-right:2.5%; overflow:hidden; border-radius:20px; height:44px; line-height:44px; border:1px solid #0d816a; font-size:18px; color:#0d816a; background-color:#fff;}
+.about_a a:hover{ background-color:#0d816a; color:#fff;}
+.about_a a.isel{background-color:#0d816a; color:#fff;}
+.about_pos{ width:100%;  z-index:99;}
+.about_pos.pos{ position:fixed; top:0; background:rgba(255, 255, 255,0.8);}
+.about_con{ overflow:hidden; padding-top:5%; padding-bottom:6%;}
+.about_con .imgs{ width:51.5%; overflow:hidden;}
+.about_con .imgs img{ width:100%; display:block;}
+.about_con .txts{ width:45.5%; overflow:hidden; line-height:36px; font-size:18px;}
+.about_con .txts .h2{ font-size:58px; color:#0998b2; font-family:Arial; text-transform:capitalize; line-height:normal; margin-bottom:6%;}
+.about_con .txts .h2 label{ font-size:36px; display:block; text-transform:lowercase; line-height:22px;}
+.about_con .txts .f30{ margin-bottom:1.8%;}
+.about_bg{ overflow:hidden; background-color:#f5f5f5;}
+.about_title{ font-size:45px; color:#0998b2; font-weight:bold; text-align:center; letter-spacing:2px; padding-top:5%; margin-bottom:5%; overflow:hidden;}
+.about_title span{ font-family:Arial; display:block;}
+.about_title h2{ font-size:45px; padding-bottom:1.5%; border-bottom:3px solid #0998b2; display:inline-block;}
+/*合作伙伴*/
+.partner_ul{ padding-top:4%;overflow:hidden;}
+.partner_ul ul li{ float:left; width:23.5%; margin-right:2%;overflow:hidden; margin-bottom:2%;}
+.partner_ul ul li:nth-child(4n+0){ margin-right:0;}
+/*.partner_ul ul li a{position:relative; overflow:hidden; display:block; width:100%; height:100%; color:#212020;}*/
+.partner_ul ul li .imgs{ overflow:hidden;transition:all 0.6s;border:1px solid #eeeeee;}
+.partner_ul ul li .imgs img{ display:block;width:100%;transition:all 0.6s;}
+.partner_ul ul li .imgs:hover{transform:rotateY(180deg);-ms-transform:rotateY(180deg);-moz-transform:rotateY(180deg);-webkit-transform:rotateY(180deg);-o-transform:rotateY(180deg);}
+.partner_ul ul li .imgs:hover img{transform:rotateY(-180deg);-ms-transform:rotateY(180deg);-moz-transform:rotateY(-180deg);-webkit-transform:rotateY(-180deg);-o-transform:rotateY(-180deg);}
+/*.partner_ul ul li a:hover .txts{ color:#fff;}
+.partner_ul ul li .txts{ position:absolute; top:0; width:100%; height:100%; line-height:100%; vertical-align:middle;transition:all 0.6s; background-color:#f2f2f2;}
+.partner_ul ul li a:hover .txts{ background-color:#0d816a;transform:rotateY(180deg);-ms-transform:rotateY(180deg);-moz-transform:rotateY(180deg);-webkit-transform:rotateY(180deg);-o-transform:rotateY(180deg);}
+.partner_ul ul li .txts h2{ font-weight:normal;  display:table; height:100%; text-align:center; width:100%; font-size:16px;}
+.partner_ul ul li .txts h2 span{display:table-cell;vertical-align:middle;}
+.partner_ul ul li a:hover .txts h2{transform:rotateY(-180deg);-ms-transform:rotateY(-180deg);-moz-transform:rotateY(-180deg);-webkit-transform:rotateY(-180deg);-o-transform:rotateY(-180deg);}*/
+
+/*解决方案*/
+.solution_bg{ overflow:hidden; background-color:#f8f8f8; padding-bottom:4%; margin-top:4%;}
+.video_con{ margin-top:3%;overflow:hidden;}
+.video_con img{ max-width:100%;}
+.video_con .ul li{ float:left; overflow:hidden; width:49%; margin-right:2%; margin-bottom:2%;}
+.video_con .ul li:nth-child(2n+0){ margin-right:0;}
+.video_con .ul li .imgs{ overflow:hidden; position:relative;}
+.video_con .ul li .imgs img{display: block;width: 100%;vertical-align:bottom;-webkit-transform:scale(1); -moz-transform:scale(1); -ms-transform:scale(1); -o-transform:scale(1); transform:scale(1);-webkit-transition:all 0.4s ease-out 0s; -moz-transition:all 0.4s ease-out 0s; -o-transition:all 0.4s ease-out 0s; transition:all 0.4s ease-out 0s; }
+.video_con .ul li:hover .imgs img{-webkit-transform:scale(1.1, 1.1); -moz-transform:scale(1.1, 1.1); -o-transform:scale(1.1, 1.1); -ms-transform:scale(1.1, 1.1); transform:scale(1.1, 1.1);}
+.video_con .ul li .txts{position:absolute; bottom:0; left:0; width:100%; overflow:hidden; height:100%; background:rgba(0, 0, 0,0.3) url("../images/solution_bg1.png")/*tpa=http://www.lenzhi.com/template/default/images/solution_bg1.png*/ center center no-repeat;}
+/*.video_con .ul li .txts i{ display:block; width:72px; height:72px; margin:0 auto; margin-top:132px; background:url(../images/about/video_bg1.png) no-repeat;}*/
+.video_con .ul li .h2{ line-height:58px; height:58px; background-color:#0998b2; font-weight:normal;text-align:center; color:#fff; overflow:hidden;}
+/*联系我们*/
+.contact_bg{ background-color:#fbfbfb; overflow:hidden; padding-bottom:2%;}
+.contact_con{ overflow: hidden; padding-bottom: 1%; padding-top:4%;}
+.contact_con ul li{ width:20%; margin-left:2%; float:left; overflow:hidden;  margin-top:1.5%; font-size:16px; line-height:26px; margin-bottom:2%; color:#333; word-break:break-all;}
+.contact_con ul li:nth-child(2){ width:24%;}
+.contact_con ul li:nth-child(3){ width:21%;}
+.contact_con ul li:nth-child(4){ width:27%;}
+.contact_con ul li img{ float:left;width:81px; margin-right:3%; margin-bottom:20px;transition: transform 300ms;}
+.contact_con ul li:hover img{transform: rotate(360deg);}
+.contact_con ul li h2{ font-weight:normal; font-size:18px;margin-top:4%; color:#666666;}
+.contact_con ul li a{ color:#333;}
+.contact_con ul li a:hover{ color:#0d816a;}
+.contact_con ul li p{ max-width:290px;/*margin-top:4%;*/}
+.contact_t2{ text-align:center; margin-top:4%; overflow:hidden; margin-bottom:4%;font-size:14px; color:#666666;}
+.contact_t2 h2{ padding-bottom:1%; color:#333;  letter-spacing:2px; background:url("../images/contact_bg1.png")/*tpa=http://www.lenzhi.com/template/default/images/contact_bg1.png*/ center bottom no-repeat; font-size:32px; font-weight:bold; margin-bottom:1%;}
+.feedback_div{padding-bottom:3%; overflow:hidden; text-align:center;}
+.feedback_div .inputs2{ float:left; width:32%; margin-right:2%; background:#f5f5f5; height:44px; line-height:44px; font-size:14px; color:#999; border:0; outline:none;  text-indent:3%; margin-bottom:3%;font-family:"微软雅黑";}
+.feedback_div .inputs2:nth-child(3){ margin-right:0;}
+.feedback_div .textarea{ padding:1%; width:98%; background:#f5f5f5; font-size:14px; font-family:"微软雅黑";border:0; outline:none;margin-bottom:3%; color:#999; height:200px;  }
+.feedback_div .bnts2{  border: none;  max-width:172px; width:30%;font-size: 16px; height: 46px; background: #0d816a; font-family:"微软雅黑"; text-align: center;color: #fff; outline: none;  cursor: pointer; -webkit-appearance: none; margin:0 auto;}
+.feedback_div .bnts2:hover{filter:alpha(opacity=70);opacity:0.7;transition:all 0.3s;}
+.contact_t3{ text-align:center; margin-top:4%; overflow:hidden; margin-bottom:3%;font-size:16px; color:#333333;}
+.map_con{ overflow:hidden; margin-bottom:6%;border:#ccc solid 1px;}
+.map_con #dituContent{width: 100%;height: 317px;float: left;}
+/*新闻资讯*/
+.news_con{ overflow:hidden; margin-top:4%;}
+.news_con ul li{ overflow:hidden; margin-bottom:3%; padding-bottom:3%; border-bottom:1px dashed #cccccc; display:block;}
+.news_con ul li:last-child{ border-bottom:0; margin-bottom:0;}
+.news_con ul li .imgs{ width:29%; float:left; display:inline; overflow:hidden;}
+.news_con ul li .imgs img{width:100%;/* -webkit-transform: scale(1) rotate(0deg);transform: scale(1) rotate(0deg);transition-duration: 0.3s;transition-timing-function: ease-out;transition-property: opacity, transform, filter;*/-webkit-transform:scale(1); -moz-transform:scale(1); -ms-transform:scale(1); -o-transform:scale(1); transform:scale(1);-webkit-transition:all 0.3s ease-out 0s; -moz-transition:all 0.3s ease-out 0s; -o-transition:all 0.3s ease-out 0s; transition:all 0.3s ease-out 0s;}
+.news_con ul li:hover .imgs img{/*-webkit-transform: scale(1.2) rotate(4deg); transform: scale(1.2) rotate(4deg);*/-webkit-transform:scale(1.1, 1.1); -moz-transform:scale(1.1, 1.1); -o-transform:scale(1.1, 1.1); -ms-transform:scale(1.1, 1.1); transform:scale(1.1, 1.1);}
+.news_con ul li .i_about_r{ float:right; display:inline; line-height:22px; width:68%; overflow:hidden; }
+.news_con ul li .i_about_r h3{ line-height:30px; height:30px; overflow:hidden; font-size:24px; color:#333; font-weight:normal; margin-bottom:1.5%; margin-top:5px;}
+.news_con ul li .i_about_r label{ font-family:"宋体";}
+.news_con ul li .i_about_r .dates{ font-size:18px; color:#666; background:url("../images/news_bg1.jpg")/*tpa=http://www.lenzhi.com/template/default/images/news_bg1.jpg*/ left top no-repeat; padding-top:1.5%; margin-top:1%; margin-bottom:1%; display:block;}
+.news_con ul li .i_about_r .p{ height:60px; overflow:hidden; font-size:12px; color:#666; line-height:20px;}
+.news_con ul li .i_about_r .news_more{ margin-top:4%; width:138px; text-align:center; float:left; height:35px; line-height:35px;background-color:#fff; border:1px solid #e6e6e6; color:#9d9d9d; font-size:14px;transition: all 0.3s;}
+.news_con ul li:hover .i_about_r .news_more{  background-color:#0d816a; color:#fff;border:1px solid #0d816a;}
+.news_con ul li:hover .i_about_r h3{ color:#0d816a;}
+.news_con ul li:hover .i_about_r .dates{background:url("../images/news_bg2.jpg")/*tpa=http://www.lenzhi.com/template/default/images/news_bg2.jpg*/ left top no-repeat;color:#0d816a;}
+/*新闻资讯详细*/
+.about_x2{ overflow:hidden; padding-bottom:10px; padding-top:4%;}
+.about_x2 .show_t{ line-height:36px; font-size:28px; color:#333; text-align:center; margin-bottom:2%; margin-top:5px; font-weight:normal;}
+.about_x2 .con_line{height:40px; line-height:40px;font-size:12px; color:#999999; border-bottom:1px dashed #cccccc; text-align:center; }
+.about_x2 img{margin-bottom:10px; display:block; max-width:100%;}
+.about_x2 .con_id{ line-height:26px;overflow:hidden;white-space:normal;word-break:break-all; padding-top:28px;font-size:14px; color:#666666;text-align:left;/* font-family:"宋体";*/ padding-bottom:20px;}
+.about_x2 .con_id .h2{ font-size:16px; line-height:24px; margin-bottom:5px;}
+.about_x2 .con_id p{ padding-bottom:10px; overflow:hidden;}
+.about_x2 table{border-collapse:collapse;border-spacing:0;}
+.about_x2 table td{ line-height:22px;height:27px; /*border:1px solid #000;*/}
+.prenext{ border-top:1px solid #e6e6e6;font-size:12px; margin-bottom:10px;line-height:30px; padding-top:15px; margin-top:15px; color:#333333;}
+.prenext a{ color:#333333;}
+.prenext a:hover{ color:#0d816a; text-decoration:none;}
+.goback{ float:right; height:26px; line-height:26px; text-align:right; padding-left:23px;background:url("../images/goback.png")/*tpa=http://www.lenzhi.com/template/default/images/goback.png*/ left center no-repeat; font-size:14px; color:#333333; margin-top:8px;/* border-bottom:1px solid #a6a6a6;*/}
+.fenxiang{ height:30px; overflow:hidden;}
+.fenxiang .span{ float:right; font-size:14px; line-height:34px;}
+/*产品服务*/
+.product_ul{ overflow:hidden; margin-top:4%;}
+.product_ul ul li{ float:left; width:23.5%; margin-right:2%; overflow:hidden; margin-bottom:2%;}
+.product_ul ul li:nth-child(4n+0){ margin-right:0;}
+.product_ul ul li .product_b{ border:2px solid #fff;transition:all 0.3s;}
+.product_ul ul li .imgs{ overflow:hidden;}
+.product_ul ul li .imgs img{ width:100%; display:block;-webkit-transform:scale(1); -moz-transform:scale(1); -ms-transform:scale(1); -o-transform:scale(1); transform:scale(1);-webkit-transition:all 0.3s ease-out 0s; -moz-transition:all 0.3s ease-out 0s; -o-transition:all 0.3s ease-out 0s; transition:all 0.3s ease-out 0s;}
+.product_ul ul li:hover .imgs img{-webkit-transform:scale(1.1, 1.1); -moz-transform:scale(1.1, 1.1); -o-transform:scale(1.1, 1.1); -ms-transform:scale(1.1, 1.1); transform:scale(1.1, 1.1);}
+.product_ul ul li .txts{ overflow:hidden; background-color:#f3f3f3; padding-left:5%; padding-right:3%; padding-top:4%; text-align:center;}
+.product_ul ul li .txts h2{ font-size:16px; color:#666; font-weight:normal; height:36px; line-height:36px; overflow:hidden;}
+.product_ul ul li .txts .p{ overflow:hidden; height:36px; line-height:18px;  font-size:12px; color:#333; margin-bottom:5%; margin-top:2%; text-align:left;}
+.product_ul ul li .txts em{ display:inline-block; font-style:normal; height:42px; line-height:42px; padding-left:8%; padding-right:8%; font-size:14px;color:#f3f3f3; background:url("../images/product_bg1.png")/*tpa=http://www.lenzhi.com/template/default/images/product_bg1.png*/center 8px no-repeat; text-transform:uppercase; letter-spacing:0.5px;transition:all 0.3s;}
+.product_ul ul li:hover .txts em{ color:#fff; background:#0d816a;}
+.product_ul ul li:hover .product_b{ border:2px solid #0d816a;}
+/*产品详细*/
+.product_one{ background:url("../images/product_bg3.png")/*tpa=http://www.lenzhi.com/template/default/images/product_bg3.png*/ center bottom no-repeat; padding:10px; padding-top:0; margin-top:9%;}
+.product_one .product_txt{background-color:#0d816a;}
+.product_one .imgs{ float:left; width:50%; position:relative;}
+.product_one .imgs .img{ display:block; width:100%;}
+.product_one .imgs2{ overflow: hidden; width: 66%;top: -23%; position: absolute; right: 0;z-index: 9; height: 120%;}
+.product_one .imgs2 img{ display: block; width: auto; height: 100%;-webkit-transform: scale(1);-moz-transform: scale(1);-ms-transform: scale(1);-o-transform: scale(1);
+ transform: scale(1);-webkit-transition: all 0.3s ease-out 0s;-moz-transition: all 0.3s ease-out 0s;-o-transition: all 0.3s ease-out 0s;transition: all 0.3s ease-out 0s;float: right;}
+.product_one .imgs:hover .imgs2 img{-webkit-transform:scale(1.1, 1.1); -moz-transform:scale(1.1, 1.1); -o-transform:scale(1.1, 1.1); -ms-transform:scale(1.1, 1.1); transform:scale(1.1, 1.1);}
+.product_one .txts{ float:right; width:50%; overflow:hidden;}
+.product_one .txts .cons{ float:right; width:94%; margin-right:2%; max-width:520px; overflow:hidden; color:#fff;}
+.product_one .txts .cons h2{ font-weight:normal; padding-top:6%; padding-bottom:3%; border-bottom:1px solid #fff;}
+.product_one .txts .cons .text{ margin-top:1%; overflow:hidden; min-height:170px; line-height:22px; font-size:14px; }
+.product_one .txts .cons .text b{ display:block; font-weight:normal; margin-top:4%; margin-bottom:1%;}
+.product_one .txts .cons .zx_a{ display:inline-block; padding-left:4%; padding-right:4%; height:44px; line-height:44px; background-color:#fff; color:#0d816a; margin-top:6%; margin-bottom:2%;}
+.product_one .txts .cons .zx_a label{ font-family:"宋体";}
+.product_one .txts .cons .zx_a:hover{transition:all 0.3s;opacity:0.8;filter:Alpha(opacity=80);}
+.product_t{ margin-top:8%; overflow:hidden; border-bottom:2px solid #0d816a;}
+.product_t h2{ height:58px; line-height:58px; background:#0d816a; float:left; padding-left:6%; padding-right:6%; color:#fff; font-weight:normal; letter-spacing:0.5px;}
+.product_con{ overflow:hidden; padding-top:4%; padding-bottom:10%; color:#666666; line-height:24px;}
+.product_con img{ max-width:100%;}
+.product_con .h3{ color:#0d816a; font-weight:normal; margin-bottom:2%; padding-left:22px; background:url("../images/product_bg2.png")/*tpa=http://www.lenzhi.com/template/default/images/product_bg2.png*/ left center no-repeat;}
+.product_con .p{ padding-left:20px; overflow:hidden;}
+@media screen and (max-width: 1440px) {
+ /*关于我们*/
+ .about_con .txts .h2{ font-size:50px;}
+ .about_con .txts .h2 label{ font-size:30px;}
+ .about_title{ font-size:40px;}
+ .about_title h2{font-size:40px; padding-bottom:1%;}
+}
+@media screen and (max-width: 1360px) {
+ /*关于我们*/
+ .about_t h2{padding-bottom:15px; margin-bottom:10px;}
+ .about_title{ font-size:36px;}
+ .about_title h2{font-size:36px; }
+ /*联系我们*/
+ .contact_con ul li{ font-size:15px; line-height:24px;}
+ .contact_con ul li img{ width:70px;}
+
+}
+
+@media screen and (max-width: 1200px) {
+ /*关于我们*/
+ .about_t h2{margin-top:-2.6%;}
+ .about_con .txts{ line-height:30px; font-size:17px;}
+ .about_con .txts .h2{ font-size:46px;}
+ .about_con .txts .h2 label{ font-size:28px;}
+ .about_title{ font-size:32px;}
+ .about_title h2{font-size:32px;}
+ /*联系我们*/
+ .contact_con ul li img{ width:60px;}
+ /*新闻资讯*/
+ .news_con ul li .i_about_r h3{ font-size:22px; margin-bottom:1%;}
+ .news_con ul li .i_about_r .dates{ font-size:16px;}
+ .news_con ul li .i_about_r .news_more{ margin-top:3%;}
+ .news_con ul li .i_about_r .news_more{ height:32px; line-height:32px; width:130px;}
+ /*产品详细*/
+ .product_t h2{ height:50px; line-height:50px;}
+}
+
+@media screen and (max-width: 1100px) {
+ /*关于我们*/
+ .about_con .txts{ line-height:28px; font-size:16px;}
+ .about_con .txts .h2{ font-size:42px;}
+ .about_con .txts .h2 label{ font-size:26px;}
+ .about_title{ font-size:30px;}
+ .about_title h2{font-size:30px;}
+ /*联系我们*/
+ .contact_t2 h2{ font-size:28px;}
+ /*新闻资讯*/
+ .news_con ul li .i_about_r h3{ font-size:20px; margin-bottom:0.6%;}
+ .news_con ul li .i_about_r .p{ line-height:20px;}
+ .news_con ul li .i_about_r .news_more{ margin-top:2%;}
+ /*产品详细*/
+ .product_one .txts .cons .zx_a{ margin-top:3%; height:40px; line-height:40px;}
+}
+@media screen and (max-width: 1000px) {
+ /*关于我们*/
+ .about_con .txts{ line-height:26px; font-size:14px;}
+ .about_title{ font-size:28px;}
+ .about_title h2{font-size:28px;}
+ /*联系我们*/
+ .contact_con ul li{ font-size:14px; line-height:22px;}
+ .contact_t2 h2{ font-size:26px;}
+ /*新闻资讯*/
+ .news_con ul li .i_about_r h3{ font-size:20px; line-height:28px; height:28px;}
+ .news_con ul li .i_about_r .news_more{ margin-top:1.5%; font-size:13px;}
+ /*产品服务*/
+ .product_ul ul li{width:32%;}
+ .product_ul ul li:nth-child(4n+0){ margin-right:2%;}
+ .product_ul ul li:nth-child(3n+0){ margin-right:0;}
+ /*产品详细*/
+ .product_one .txts .cons h2{ padding-top:3%;}
+}
+
+@media screen and (max-width: 960px) {
+ /*关于我们*/
+ .about_a a{   height:40px; line-height:40px; font-size:17px;}
+ .about_con .txts{ line-height:24px; font-size:13px;}
+ .about_con .txts .h2{ margin-bottom:4%;}
+ .about_title{ font-size:26px;}
+ .about_title h2{font-size:26px;}
+ /*解决方案*/
+ .video_con .ul li .h2{ height:46px; line-height:46px;}
+ /*联系我们*/
+ .contact_con ul li{ width:43%; }
+ .contact_con ul li:nth-child(2){ width:43%;}
+ .contact_con ul li:nth-child(3){ width:43%;}
+ .contact_con ul li:nth-child(4){ width:43%;}
+ .contact_t2 h2{ font-size:24px;}
+ /*新闻资讯*/
+ .news_con ul li .i_about_r h3{ font-size:18px; }
+ .news_con ul li .i_about_r .dates{ font-size:14px;}
+ .news_con ul li .i_about_r .news_more{ display:none;}
+ /*产品详细*/
+ .product_one .txts .cons .text{ min-height:inherit; line-height:20px;}
+ .product_one .txts .cons .text b{ margin-top:2%;}
+ .product_one .txts .cons .zx_a{height:32px; line-height:32px;}
+ .product_t h2{ height:44px; line-height:44px;}
+}
+@media screen and (max-width: 830px) {
+ /*关于我们*/
+ .about_t h2{margin-top:-3%;}
+ .about_con .txts{ line-height:22px; font-size:12px;}
+ .about_title{ font-size:24px;}
+ .about_title h2{font-size:24px;}
+ /*产品详细*/
+ .product_one{ background-size:100% 100%; margin-top:18%;}
+ .product_one .imgs{ width:100%;}
+ .product_one .txts{ width:100%;}
+ .product_one .txts .cons{ max-width:none; width:96%; padding-bottom:2%;}
+}
+@media screen and (max-width: 780px) {
+ /*关于我们*/
+ .about_con .imgs{ width:100%;}
+ .about_con .txts{ width:100%; margin-top:4%; font-size:14px; line-height:24px;}
+ /*合作伙伴*/
+ .partner_ul ul li{ width:32%;}
+ .partner_ul ul li:nth-child(4n+0){ margin-right:2%;}
+ .partner_ul ul li:nth-child(3n+0){ margin-right:0;}
+ /*联系我们*/
+ .contact_con ul li{font-size:13px;}
+ .contact_con ul li h2{ font-size:16px;}
+ /*新闻资讯*/
+ .news_con ul li .i_about_r h3{ font-size:16px;}
+ .news_con ul li .i_about_r .dates{ font-size:13px;}
+ /*产品服务*/
+ .product_ul ul li{width:49%;}
+ .product_ul ul li:nth-child(3n+0){ margin-right:2%;}
+ .product_ul ul li:nth-child(2n+0){ margin-right:0;}
+}
+
+@media screen and (max-width: 640px) {
+ .o_big{ height:190px;}
+ /*关于我们*/
+ .about_a a{   height:36px; line-height:36px; font-size:14px;}
+ .about_title{ font-size:22px;}
+ .about_title h2{font-size:22px;}
+ /*合作伙伴*/
+ .partner_ul ul li{ width:49%;}
+ .partner_ul ul li:nth-child(4n+0){ margin-right:2%;}
+ .partner_ul ul li:nth-child(3n+0){ margin-right:2%;}
+ .partner_ul ul li:nth-child(2n+0){ margin-right:0;}
+ /*解决方案*/
+ .video_con .ul li{ width:100%; margin-right:0%;}
+ /*联系我们*/
+ .contact_con ul li{ width:94%; }
+ .contact_con ul li:nth-child(2){ width:94%;}
+ .contact_con ul li:nth-child(3){ width:94%;}
+ .contact_con ul li:nth-child(4){ width:94%;}
+ .contact_con ul li h2{ margin-top:2%;}
+ .contact_t2{ font-size:12px;}
+ .contact_t2 h2{ font-size:20px; padding-bottom:1.5%; margin-bottom:1.5%;}
+ .feedback_div{ padding-bottom:5%;}
+ .feedback_div .textarea{ padding-top:1.5%;}
+ /*新闻资讯*/
+ .news_con ul li .i_about_r h3{ height:24px; line-height:24px; margin-top:0;}
+ .news_con ul li .i_about_r .p{ line-height:18px; height:54px;}
+ /*新闻资讯详细*/
+ .about_x2 .show_t{ font-size:24px; line-height:32px;}
+ /*产品详细*/
+ .product_one{ padding:6px; padding-top:0;}
+}
+
+@media screen and (max-width: 480px) {
+ .o_big{ height:170px;}
+ /*关于我们*/
+ .about_t h2{margin-top:-4.4%; letter-spacing:1px;}
+ .about_t label{ display:inline}
+ .about_a{ margin-top:4%;}
+ .about_a a{ padding-left:4%; padding-right:4%; font-size:13px;  margin-left:0.5%; margin-right:0.5%;}
+ .about_title{ font-size:20px;}
+ .about_title h2{font-size:20px;}
+ /*合作伙伴*/
+ .partner_ul ul li .txts h2{ font-size:14px;}
+ /*解决方案*/
+ .video_con .ul li .h2{ height:40px; line-height:40px;}
+ /*联系我们*/
+ .feedback_div .inputs2{ width:100%; margin-right:0; }
+ .feedback_div .textarea{ padding-left:3%; width:96%; padding-top:2%;}
+ .feedback_div .bnts2{ height:36px; font-size:14px;}
+ .contact_t3{ font-size:14px;}
+ /*新闻资讯*/
+ .news_con ul li .i_about_r h3{ font-size:14px;}
+ .news_con ul li .i_about_r .dates{ padding-top:2%; font-size:12px; margin-bottom:0; line-height:18px; margin-top:0;}
+ .news_con ul li .i_about_r .p{ height:36px;}
+ /*新闻资讯详细*/
+ .about_x2 .show_t{ font-size:22px; line-height:30px;}
+ /*产品服务*/
+ .product_ul ul li .txts{ padding-top:2%;}
+ .product_ul ul li .txts h2{ font-size:14px;}
+ .product_ul ul li .txts em{ height:36px; line-height:36px; font-size:12px;}
+ /*产品详细*/
+ .product_one .imgs2{ width:100%;}
+ .product_one .imgs2 img{ float:none; margin:0 auto;}
+ .product_one .txts .cons h2{ font-size:18px;}
+ .product_t h2{ height:40px; line-height:40px;}
+}
+@media screen and (max-width: 360px) {
+ /*关于我们*/
+ .about_t h2{margin-top:-5.7%;}
+ .about_a a{ font-size:12px;margin-left:0px; margin-right:0px; padding-left:3%; padding-right:3%;}
+ .about_title{ font-size:18px;}
+ .about_title h2{font-size:18px;}
+ /*解决方案*/
+ .video_con .ul li .h2{ height:36px; line-height:36px;}
+}
+@media screen and (max-width: 320px) {
+
+}

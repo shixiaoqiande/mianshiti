@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		body,html{
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(-90deg, #29bdd9 0%, #276ace 100%);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.box{
+			width: 90%;
+			height: 500px;
+			border-radius: 10px;
+			overflow: hidden;
+		}
+		.tabBtn{
+			width: 100%;
+			height: 80px;
+			display: flex;
+		}
+		.tabBtn li{
+			width: 150px;
+			height: 100%;
+			text-align: center;
+			line-height: 80px;
+			margin-right: 15px;
+			background: rgba(255,255,255,.3);
+			color: rgba(0,0,0,.5);
+			border-radius: 10px 10px 0 0;
+		}
+		.tabBtn li:nth-child(1){
+			background: rgba(255,255,255,.5);
+		}
+		.content{
+			width: 100%;
+			height: 420px;
+			position: relative;
+		}
+		.content li{
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			line-height: 420px;
+			color: #fff;
+			font-size: 40px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 0;
+		}
+		.content li:nth-child(1){
+			z-index: 1;
+			background: red;
+		}
+		.content li:nth-child(2){
+			background: orange;
+		}
+		.content li:nth-child(3){
+			background: green;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<ul class="tabBtn">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+		</ul>
+		<ul class="content">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+		</ul>
+	</div>
+	<script>
+		let tabBtns = document.querySelectorAll('.tabBtn li');
+		let contents = document.querySelectorAll('.content li');
+		for(var i=0;i<tabBtns.length;i++){
+			tabBtns[i].index = i;
+			tabBtns[i].onclick = function(){
+				for(var j=0;j<tabBtns.length;j++){
+					tabBtns[j].style.background = 'rgba(255,255,255,.3)';
+					contents[j].style.zIndex = '0';
+				}
+				tabBtns[this.index].style.background = 'rgba(255,255,255,.5)';
+				contents[this.index].style.zIndex = '1';
+			}
+		}
+	</script>
+</body>
+</html>

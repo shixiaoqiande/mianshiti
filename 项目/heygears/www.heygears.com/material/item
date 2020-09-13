@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>3D打印技术_3D打印应用_数字化生产_医疗3D打印-黑格科技</title>
+    <meta name="baidu-site-verification" content="ckg4wn8qs9" />
+    <meta name="keywords" content="3D打印技术,DLP 3D打印,3D打印材料,3D打印应用,医疗3D打印"/>
+    <meta name="description" content="领先的3d打印应用厂家-黑格科技,拥有工业级的3D打印机,专注于将3d打印技术与数字化生产应用到不同领域.现已推出三大系列3d打印材料,覆盖多项牙科、工程与医疗应用."/>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="shortcut icon" href="//uc-static.heygears.com/ultra_web/public/imgs/favicon.ico" type="img/favicon.ico"/>
+    <style>body{font-size:100%; }.g-doc {font-size: 14px;/*no*/}[v-cloak] {display: none !important;}</style>
+    
+    <!---->
+    <script type="text/javascript">
+        //Object.defineProperty(document, "Referer", {get : function(){ return "http://dev.www.xn--0xvx82j.com/"; }});
+        var layout=function(){var t,e=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth;1366>e?(e=1366,t=625*e/1920):t=e>1920&&2560>=e?625:e>2560?625*e/2560:625*e/1920,document.getElementsByTagName("html")[0].style.fontSize=t+"%";if((/Trident\/7\./).test(navigator.userAgent)){document.getElementsByTagName("body")[0].style.fontSize="100%";}};layout();var addEvent=function(t,e,n){null!=t&&void 0!==t&&(t.addEventListener?t.addEventListener(e,n,!1):t.attachEvent?t.attachEvent("on"+e,n):t["on"+e]=n)};addEvent(window,"resize",function(){layout();});
+    </script>
+</head>
+<body style="font-size:100%;">
+<div class="g-doc-rel">
+    <div class="g-doc loading">
+        <div class="g-hd">
+             <div id="header"><div class="bg-menu-bar" v-cloak><a href="https://www.heygears.com" class="hg-logo"></a><div class="language fr"><a>中文</a> <span>|</span><a style="opacity: 0.36;" @click="changeLang()">English</a></div><div class="nav-list fr"><ul class="clearfix"><li class="oli"><a class="indexName" href="https://www.heygears.com">首页</a></li><li class="oli oliother" data-url="1243"><a href="https://www.heygears.com/technology.html">设备与技术</a><div class="sub-nav-list-box"><div class="sub-nav-list"><div class="line"></div><ul><li><a href="https://www.heygears.com/technology.html"><span class="linkBg01"></span> <em>核心技术 （DLP+）</em></a></li><li style="margin-left: 0;"><a href="https://www.heygears.com/A-series.html"><span class="linkBg02"></span> <em>A系列</em></a></li><li><a href="https://www.heygears.com/D-series.html"><span class="linkBg03"></span> <em>D系列</em></a></li><li><a href="https://www.heygears.com/accessories.html"><span class="linkBg04"></span> <em>配件</em></a></li><li><a href="https://www.heygears.com/processing.html"><span class="linkBg05"></span> <em>后处理</em></a></li></ul></div></div></li><li class="oli oliother"><a href="https://www.heygears.com/software.html">软件与系统</a><div class="sub-nav-list-box"><div class="sub-nav-list"><div class="line"></div><ul><li><a href="https://www.heygears.com/hub.html"><span class="linkBg"></span> <em>云端数据管理中心</em></a></li><li><a href="https://www.heygears.com/net.html"><span class="linkBg linkBg1"></span> <em>设备集群化管理系统</em></a></li><li><a href="https://www.heygears.com/HAI.html"><span class="linkBg linkBg2"></span> <em>H.AI™ 人工智能算法</em></a></li></ul></div></div></li><li class="oli"><a href="https://www.heygears.com/material.html">材料</a></li><li class="oli"><a href="https://www.heygears.com/case.html">案例</a></li><li class="oli"><a href="https://www.heygears.com/about.html">关于</a><div class="sub-nav-list-box"><div class="sub-nav-list"><div class="line"></div><ul><li><a href="https://www.heygears.com/about.html"><em>关于黑格</em></a></li><li><a href="https://www.heygears.com/contact.html"><em>联系我们</em></a></li><li><a href="https://www.heygears.com/download.html"><em>下载中心</em></a></li><li><a href="https://www.heygears.com/join-us.html"><em>加入我们</em></a></li></ul></div></div></li><li class="oli"><a href="https://www.heygears.com/news.html">新闻资讯</a></li></ul></div></div></div>
+        </div>
+        <div class="g-bd">
+            <div class="g-mn">
+                <head><link href="//static.heygears.com/ultra_web/static/css/pc/base.0d971d01.css" rel="stylesheet"><link href="//static.heygears.com/ultra_web/static/css/pc/zh/errors/index.84c0cae0.css" rel="stylesheet"></head><div id="errors"><img src="//static.heygears.com/ultra_web/static/imgs/PX-1nlX.jpg" alt=""><div class="button" @click="goToIndex">返回首页</div></div><script type="text/javascript" src="//static.heygears.com/ultra_web/static/js/pc/base.6eb18102.js"></script><script type="text/javascript" src="//static.heygears.com/ultra_web/static/js/pc/zh/errors/index.04c24c26.js"></script>
+            </div>
+        </div>
+        <div class="g-ft">
+                
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    function getCookie(o){for(var g=o+"=",n=document.cookie.split(";"),e=0;e<n.length;e++){for(var a=n[e];" "==a.charAt(0);)a=a.substring(1);if(0==a.indexOf(g))return a.substring(g.length,a.length)}return""}var g_doc=document.getElementsByClassName("g-doc")[0],langCookie=getCookie("hg_lang"),browser_lang=navigator.browserLanguage?navigator.browserLanguage:navigator.language;g_doc.className=langCookie?"cn"==langCookie?"g-doc "+langCookie:"g-doc loading "+langCookie:browser_lang.indexOf("zh")>-1?"g-doc cn":"g-doc loading en";
+</script>
+
+
+
+<script>
+//百度统计
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?2cdc91a02fa1af8188d69c88b14ae74a";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>

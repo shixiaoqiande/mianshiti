@@ -1,0 +1,353 @@
+.owl-carousel .owl-wrapper:after{content: ".";display: block;clear: both;visibility: hidden;line-height: 0;height: 0;}
+/* display none until init*/
+.owl-carousel{display: none;position: relative;width: 100%;-ms-touch-action: pan-y;}
+.owl-carousel .owl-wrapper{display: none;position: relative;-webkit-transform: translate3d(0px, 0px, 0px);}
+.owl-carousel .owl-wrapper-outer{overflow: hidden;position: relative;width: 100%;}
+.owl-carousel .owl-wrapper-outer.autoHeight{-webkit-transition: height 500ms ease-in-out;-moz-transition: height 500ms ease-in-out;-ms-transition: height 500ms ease-in-out;-o-transition: height 500ms ease-in-out;transition: height 500ms ease-in-out;}
+.owl-carousel .owl-item{float: left;}
+.owl-controls .owl-page,
+.owl-controls .owl-buttons div{cursor: pointer;}
+.owl-controls{-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
+/* mouse grab icon*/
+.grabbing{cursor:url("../images/grabbing.png")/*tpa=http://www.lenzhi.com/template/default/images/grabbing.png*/ 8 8, move;}
+/* fix*/
+.owl-carousel .owl-wrapper,
+.owl-carousel .owl-item{-webkit-backface-visibility: hidden;-moz-backface-visibility: hidden;-ms-backface-visibility: hidden;-webkit-transform: translate3d(0,0,0);-moz-transform: translate3d(0,0,0);-ms-transform: translate3d(0,0,0);}
+.owl-theme .owl-controls{/*margin-bottom:20px;*/text-align: center;}
+/* Styling Next and Prev buttons*/
+.owl-theme .owl-controls .owl-buttons div{color: #FFF;display: inline-block;zoom: 1;*display: inline; width:38px; height:74px;/*IE7 life-saver*/ text-indent:40px; margin-top:-16%; z-index:9; position:relative; overflow:hidden;-webkit-transition: all 0.3s ease-out 0s;-moz-transition: all 0.3s ease-out 0s;-o-transition: all 0.3s ease-out 0s;transition: all 0.3s ease-out 0s;}
+.owl-theme .owl-controls .owl-buttons div.owl-prev{background:url("../images/i_pro_left.png")/*tpa=http://www.lenzhi.com/template/default/images/i_pro_left.png*/ no-repeat; float:left;}
+.owl-theme .owl-controls .owl-buttons div.owl-prev:hover{background:url("../images/i_pro_left_on.png")/*tpa=http://www.lenzhi.com/template/default/images/i_pro_left_on.png*/ no-repeat;}
+.owl-theme .owl-controls .owl-buttons div.owl-next{ background:url("../images/i_pro_right.png")/*tpa=http://www.lenzhi.com/template/default/images/i_pro_right.png*/ no-repeat; float:right;}
+.owl-theme .owl-controls .owl-buttons div.owl-next:hover{background:url("../images/i_pro_right_on.png")/*tpa=http://www.lenzhi.com/template/default/images/i_pro_right_on.png*/ no-repeat; }
+/* Clickable class fix problem with hover on touch devices*//* Use it for non-touch hover action*/
+.owl-theme .owl-controls.clickable .owl-buttons div:hover{filter: Alpha(Opacity=100);/*IE7 fix*/opacity: 1;text-decoration: none;}
+/* Styling Pagination*/
+.owl-theme .owl-controls .owl-page{display: inline-block;zoom: 1;*display: inline;/*IE7 life-saver*/ display:none;}
+.owl-theme .owl-controls .owl-page span{display: block;width: 10px;height: 10px;margin: 5px 5px;/*filter: Alpha(Opacity=50);opacity: 0.5;*/-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%;background:#ccc;}
+.owl-theme .owl-controls .owl-page.active span{background:#4cb6ed;}
+/* If PaginationNumbers is true 
+.owl-theme .owl-controls.clickable .owl-page:hover span*/
+.owl-theme .owl-controls .owl-page span.owl-numbers{height: auto;width: auto;color: #FFF;padding: 2px 10px;font-size: 12px;-webkit-border-radius: 30px;-moz-border-radius: 30px;border-radius: 30px;}
+/* preloading images*/
+.owl-item.loading{min-height: 150px;background: url("../images/AjaxLoader.gif")/*tpa=http://www.lenzhi.com/template/default/images/AjaxLoader.gif*/ no-repeat center center}
+
+/*首页手机轮显*/
+.flash_div{ display:none;}
+#owl-flash{text-align:center;}
+#owl-flash.owl-theme .owl-controls{ bottom:0px; text-align:center; position:absolute; width:100%;}
+#owl-flash.owl-theme .owl-controls .owl-pagination{ }
+/* Styling Pagination*/
+#owl-flash.owl-theme .owl-controls .owl-page{display: inline-block;zoom: 1;*display: inline;/*IE7 life-saver*/}
+#owl-flash.owl-theme .owl-controls .owl-page span{display: block;width: 10px;height: 10px;margin: 5px 5px;/*filter: Alpha(Opacity=50);opacity: 0.5;*/-webkit-border-radius: 20px;-moz-border-radius: 20px;border-radius: 50%;background:#fff;}
+#owl-flash.owl-theme .owl-controls .owl-page.active span{background:#0d816a;}
+#owl-flash.owl-theme .owl-controls .owl-buttons{ position:absolute; top:30%; width:100%; left:0; height:0; display:none;}
+#owl-flash.owl-theme .owl-controls .owl-page{ display:inline-block;}
+
+#owl-flash .item{margin: 0px;}
+#owl-flash .item img{display:block; width:100%; height:100%;}
+#owl-flash .item dd{ width:100%;}
+
+/*产品*/
+#owl-demo5{text-align:center; width:100%; margin-bottom:5%; overflow:hidden;}
+#owl-demo5.owl-theme .owl-pagination{ display:none;}
+#owl-demo5.owl-theme .owl-controls{ padding-top:0%;}
+#owl-demo5.owl-theme .owl-controls .owl-buttons{ position:absolute; bottom:26%; width:100%; left:0; height:0; text-align:right;}
+#owl-demo5.owl-theme .owl-controls .owl-buttons div{color: #FFF;display: inline-block;zoom: 1;*display: inline; width:36px; height:35px;/*IE7 life-saver*/ text-indent:60px;overflow:hidden;-webkit-transition: all 0.3s ease-out 0s;-moz-transition: all 0.3s ease-out 0s;-o-transition: all 0.3s ease-out 0s;transition: all 0.3s ease-out 0s; }
+#owl-demo5.owl-theme .owl-controls .owl-buttons div.owl-prev{background:url("../images/left.png")/*tpa=http://www.lenzhi.com/template/default/images/left.png*/ no-repeat; float:none; }
+#owl-demo5.owl-theme .owl-controls .owl-buttons div.owl-prev:hover{transition:all 0.3s;opacity:0.8;filter:Alpha(opacity=80);background:url("../images/left_on.png")/*tpa=http://www.lenzhi.com/template/default/images/left_on.png*/ no-repeat;}
+#owl-demo5.owl-theme .owl-controls .owl-buttons div.owl-next{ background:url("../images/right.png")/*tpa=http://www.lenzhi.com/template/default/images/right.png*/ no-repeat; float:none; margin-right:2.6%; margin-left:3px;}
+#owl-demo5.owl-theme .owl-controls .owl-buttons div.owl-next:hover{transition:all 0.3s;opacity:0.8;filter:Alpha(opacity=80);background:url("../images/right_on.png")/*tpa=http://www.lenzhi.com/template/default/images/right_on.png*/ no-repeat; }
+#owl-demo5.owl-theme .owl-controls .owl-page{ display:inline-block;}
+
+#owl-demo5 .item{margin: 0px 0;text-align:center; }
+#owl-demo5 .item dd{ width:100%;margin:0 auto; position:relative;padding-top:9%; overflow:hidden;}
+#owl-demo5 .item dd .imgs{ float:left;width:50%; padding-right:10px; padding-bottom:10px; background:url("../images/i_bg2.png")/*tpa=http://www.lenzhi.com/template/default/images/i_bg2.png*/ right bottom no-repeat;position:relative;}
+#owl-demo5 .item dd .imgs .img{ display:block; width:100%;}
+#owl-demo5 .item dd .imgs2{ overflow:hidden; width:66%;top:-23%; position:absolute; left:0; z-index:9;  height:120%;}
+#owl-demo5 .item dd .imgs2 img{display: block;width: auto; height:100%;-webkit-transform:scale(1); -moz-transform:scale(1); -ms-transform:scale(1); -o-transform:scale(1); transform:scale(1);-webkit-transition:all 0.3s ease-out 0s; -moz-transition:all 0.3s ease-out 0s; -o-transition:all 0.3s ease-out 0s; transition:all 0.3s ease-out 0s;}
+#owl-demo5 .item dd:hover .imgs2 img{-webkit-transform:scale(1.1, 1.1); -moz-transform:scale(1.1, 1.1); -o-transform:scale(1.1, 1.1); -ms-transform:scale(1.1, 1.1); transform:scale(1.1, 1.1);}
+#owl-demo5 .item dd .txts{ width:52%; position:absolute; right:1%; background:#fff; top:28%; height:62%; border-left:4px solid #0d816a;-webkit-box-shadow: 0 3px 15px rgba(0,0,0,0.1); box-shadow: 0 3px 15px rgba(0,0,0,0.1);}
+#owl-demo5 .item dd .txts .imgs3{ float:left; width:13%; margin-top:13%;}
+#owl-demo5 .item dd .txts .imgs3 img{ width:200%; margin-left:-100%;transition: transform 300ms;}
+#owl-demo5 .item dd .txts .imgs3 img:hover{transform: rotate(360deg);}
+#owl-demo5 .item dd .txts .cons{ width:80%; margin-right:3%; float:right; overflow:hidden; text-align:left;}
+#owl-demo5 .item dd .txts .cons h2{ font-weight:normal; padding-left:28px; overflow:hidden;  background:url("../images/i_bg6.png")/*tpa=http://www.lenzhi.com/template/default/images/i_bg6.png*/ left center no-repeat; margin-top:10%; margin-bottom:5%; color:#333; background-size:auto 100%;transition:all 0.3s;}
+#owl-demo5 .item dd .txts:hover .cons h2{ color:#0d816a;-webkit-transform: translateX(0) translateY(-10%); -moz-transform: translateX(0) translateY(-10%);
+ transform: translateX(0) translateY(-10%);}
+#owl-demo5 .item dd .txts .cons p{ line-height:26px; height:78px; overflow:hidden; color:#333;transition:all 0.3s;}
+#owl-demo5 .item dd .txts:hover .cons p{color:#0d816a; -webkit-transform: translateX(0) translateY(-10%); -moz-transform: translateX(0) translateY(-10%);
+ transform: translateX(0) translateY(-10%);}
+#owl-demo5 .item dd .txts label{ overflow:hidden; font-size:16px; height:20px; display:block; color:#666; margin-top:6%; border-top:1px solid #cccccc; padding-top:3%; cursor:pointer;}
+
+/*产品2*/
+#owl-demo6{text-align:center; width:100%; margin-bottom:5%; overflow:hidden;}
+#owl-demo6.owl-theme .owl-pagination{ display:none;}
+#owl-demo6.owl-theme .owl-controls{ padding-top:0%;}
+#owl-demo6.owl-theme .owl-controls .owl-buttons{ position:absolute; bottom:26%; width:100%; left:0; height:0;}
+#owl-demo6.owl-theme .owl-controls .owl-buttons div{color: #FFF;display: inline-block;zoom: 1;*display: inline; width:36px; height:35px;/*IE7 life-saver*/ text-indent:60px;overflow:hidden;-webkit-transition: all 0.3s ease-out 0s;-moz-transition: all 0.3s ease-out 0s;-o-transition: all 0.3s ease-out 0s;transition: all 0.3s ease-out 0s; }
+#owl-demo6.owl-theme .owl-controls .owl-buttons div.owl-prev{background:url("../images/left.png")/*tpa=http://www.lenzhi.com/template/default/images/left.png*/ no-repeat; float:none; }
+#owl-demo6.owl-theme .owl-controls .owl-buttons div.owl-prev:hover{transition:all 0.3s;opacity:0.8;filter:Alpha(opacity=80);background:url("../images/left_on.png")/*tpa=http://www.lenzhi.com/template/default/images/left_on.png*/ no-repeat;}
+#owl-demo6.owl-theme .owl-controls .owl-buttons div.owl-next{ background:url("../images/right.png")/*tpa=http://www.lenzhi.com/template/default/images/right.png*/ no-repeat; float:none; margin-right:17%; margin-left:3px;}
+#owl-demo6.owl-theme .owl-controls .owl-buttons div.owl-next:hover{transition:all 0.3s;opacity:0.8;filter:Alpha(opacity=80);background:url("../images/right_on.png")/*tpa=http://www.lenzhi.com/template/default/images/right_on.png*/ no-repeat; }
+#owl-demo6.owl-theme .owl-controls .owl-page{ display:inline-block;}
+
+#owl-demo6 .item{margin: 0px 0;text-align:center; }
+#owl-demo6 .item dd{ width:100%;margin:0 auto; position:relative;padding-top:9%; overflow:hidden;}
+#owl-demo6 .item dd .imgs{ float:right;width:50%; padding-right:10px; padding-bottom:10px; background:url("../images/i_bg2.png")/*tpa=http://www.lenzhi.com/template/default/images/i_bg2.png*/ right bottom no-repeat;position:relative;}
+#owl-demo6 .item dd .imgs .img{ display:block; width:100%;}
+#owl-demo6 .item dd .imgs2{ overflow:hidden; width:66%;top:-23%; position:absolute; right:0; z-index:9;  height:120%;}
+#owl-demo6 .item dd .imgs2 img{display: block;width: auto; height:100%;-webkit-transform:scale(1); -moz-transform:scale(1); -ms-transform:scale(1); -o-transform:scale(1); transform:scale(1);-webkit-transition:all 0.3s ease-out 0s; -moz-transition:all 0.3s ease-out 0s; -o-transition:all 0.3s ease-out 0s; transition:all 0.3s ease-out 0s; float:right;}
+#owl-demo6 .item dd:hover .imgs2 img{-webkit-transform:scale(1.1, 1.1); -moz-transform:scale(1.1, 1.1); -o-transform:scale(1.1, 1.1); -ms-transform:scale(1.1, 1.1); transform:scale(1.1, 1.1);}
+#owl-demo6 .item dd .txts{ width:52%; position:absolute; left:1%; background:#fff; top:28%; height:62%; border-right:4px solid #0d816a;-webkit-box-shadow: 0 3px 15px rgba(0,0,0,0.1); box-shadow: 0 3px 15px rgba(0,0,0,0.1);}
+#owl-demo6 .item dd .txts .imgs3{ float:right; width:13%; margin-top:13%;}
+#owl-demo6 .item dd .txts .imgs3 img{ width:200%; margin-right:-100%;transition: transform 300ms;}
+#owl-demo6 .item dd .txts .imgs3 img:hover{transform: rotate(360deg);}
+#owl-demo6 .item dd .txts .cons{ width:80%; margin-right:3%; float:right; overflow:hidden; text-align:left;}
+#owl-demo6 .item dd .txts .cons h2{ font-weight:normal; padding-left:28px; overflow:hidden;  background:url("../images/i_bg6.png")/*tpa=http://www.lenzhi.com/template/default/images/i_bg6.png*/ left center no-repeat; margin-top:10%; margin-bottom:5%; color:#333; background-size:auto 100%;transition:all 0.3s;}
+#owl-demo6 .item dd .txts:hover .cons h2{ color:#0d816a;-webkit-transform: translateX(0) translateY(-10%); -moz-transform: translateX(0) translateY(-10%);
+ transform: translateX(0) translateY(-10%);}
+#owl-demo6 .item dd .txts .cons p{ line-height:26px; height:78px; overflow:hidden; color:#333;transition:all 0.3s;}
+#owl-demo6 .item dd .txts:hover .cons p{color:#0d816a; -webkit-transform: translateX(0) translateY(-10%); -moz-transform: translateX(0) translateY(-10%);
+ transform: translateX(0) translateY(-10%);}
+#owl-demo6 .item dd .txts label{ overflow:hidden; font-size:16px; height:20px; display:block; color:#666; margin-top:6%; border-top:1px solid #cccccc; padding-top:3%; cursor:pointer;}
+
+/*解决方案*/
+#owl-demo7{text-align:center; width:100%;}
+#owl-demo7.owl-theme .owl-pagination{ display:none;}
+#owl-demo7.owl-theme .owl-controls{ padding-top:0%;}
+#owl-demo7.owl-theme .owl-controls .owl-buttons{ position:absolute; bottom:20%; width:100%; left:0; height:0;}
+#owl-demo7.owl-theme .owl-controls .owl-buttons div{color: #FFF;display: inline-block;zoom: 1;*display: inline; width:62px; height:62px;/*IE7 life-saver*/ text-indent:66px;overflow:hidden;-webkit-transition: all 0.3s ease-out 0s;-moz-transition: all 0.3s ease-out 0s;-o-transition: all 0.3s ease-out 0s;transition: all 0.3s ease-out 0s; }
+#owl-demo7.owl-theme .owl-controls .owl-buttons div.owl-prev{background:url("../images/left2.png")/*tpa=http://www.lenzhi.com/template/default/images/left2.png*/ no-repeat; float:left; }
+#owl-demo7.owl-theme .owl-controls .owl-buttons div.owl-prev:hover{transition:all 0.3s;opacity:0.8;filter:Alpha(opacity=80);}
+#owl-demo7.owl-theme .owl-controls .owl-buttons div.owl-next{ background:url("../images/right2.png")/*tpa=http://www.lenzhi.com/template/default/images/right2.png*/ no-repeat; float:right;}
+#owl-demo7.owl-theme .owl-controls .owl-buttons div.owl-next:hover{transition:all 0.3s;opacity:0.8;filter:Alpha(opacity=80); }
+#owl-demo7.owl-theme .owl-controls .owl-page{ display:inline-block;}
+
+#owl-demo7 .item{margin: 0px 0;text-align:center; }
+#owl-demo7 .item dd{ width:100%;margin:0 auto; position:relative;margin-top:22%; overflow:hidden;transition:all 0.3s;}
+#owl-demo7 .item dd .imgs{width:100%; overflow:hidden;}
+#owl-demo7 .item dd .imgs img{ display:block; width:100%;-webkit-transform:scale(1); -moz-transform:scale(1); -ms-transform:scale(1); -o-transform:scale(1); transform:scale(1);-webkit-transition:all 0.3s ease-out 0s; -moz-transition:all 0.3s ease-out 0s; -o-transition:all 0.3s ease-out 0s; transition:all 0.3s ease-out 0s;}
+#owl-demo7 .item dd:hover .imgs img{-webkit-transform:scale(1.1, 1.1); -moz-transform:scale(1.1, 1.1); -o-transform:scale(1.1, 1.1); -ms-transform:scale(1.1, 1.1); transform:scale(1.1, 1.1);}
+#owl-demo7 .item dd .txts{ transition:all 0.3s;position:absolute; top:0; left:0; width:100%; height:100%; overflow:hidden;background:rgba(13, 129, 106, 0.8); color:#fff;}
+#owl-demo7 .item dd .txts h2{ font-weight:normal; background:url("../images/i_bg10.png")/*tpa=http://www.lenzhi.com/template/default/images/i_bg10.png*/ center bottom no-repeat; height:50px; line-height:50px; overflow:hidden; margin-top:17%; text-transform:uppercase; letter-spacing:1px;}
+#owl-demo7 .item dd .txts p{ height:22px; line-height:22px; overflow:hidden; margin-top:3%;}
+#owl-demo7 .item dd .txts span{ font-size:14px; text-transform:uppercase; writing-mode: vertical-lr;writing-mode: tb-lr; height:220px; float:left; margin-left:6%; margin-top:12%; letter-spacing:0.5px; }
+#owl-demo7 .item dd .txts2{filter: Alpha(Opacity=0);opacity: 0;transition:all 0.3s;position:absolute; top:0; left:0; width:100%; height:100%; overflow:hidden; background:url("../images/i_bg8.png")/*tpa=http://www.lenzhi.com/template/default/images/i_bg8.png*/ center center no-repeat;}
+#owl-demo7 .item dd.active{ margin-top:12%;}
+#owl-demo7 .item dd.active .txts{filter: Alpha(Opacity=0);opacity: 0;}
+#owl-demo7 .item dd.active .txts2{filter: Alpha(Opacity=100);opacity: 1.0;}
+
+/*新闻资讯*/
+#owl-demo8{text-align:center; width:100%; margin-top:5%; margin-bottom:7%;}
+#owl-demo8.owl-theme .owl-pagination{ display:none;}
+#owl-demo8.owl-theme .owl-controls{ padding-top:0%;}
+#owl-demo8.owl-theme .owl-controls .owl-buttons{ position:absolute; bottom:20%; width:100%; left:0; height:0; display:none;}
+#owl-demo8.owl-theme .owl-controls .owl-page{ display:inline-block;}
+
+#owl-demo8 .item{margin: 0px 0;text-align:center; }
+#owl-demo8 .item dd{ overflow:hidden; text-align:left;}
+#owl-demo8 .item dd .txts{border:3px solid #fff;overflow:hidden;transition:all 0.3s;}
+#owl-demo8 .item dd .cons{width:94%; margin:0 auto; max-width:300px;}
+#owl-demo8 .item dd .ndate{ height:86px; line-height:86px; overflow:hidden; background:url("../images/i_bg11.png")/*tpa=http://www.lenzhi.com/template/default/images/i_bg11.png*/ right 70% no-repeat; margin-top:5%;}
+#owl-demo8 .item dd .ndate b{ letter-spacing:2px; color:#342c29; font-size:60px; padding-right:2%; font-family:Arial;}
+#owl-demo8 .item dd .ndate label{ color:#9c9c9c; font-size:12px; letter-spacing:1px;}
+#owl-demo8 .item dd .h2{ font-weight:bold; color:#333333; font-size:16px; height:40px; line-height:40px; overflow:hidden;}
+#owl-demo8 .item dd .p{color:#333333; font-size:14px; line-height:22px; max-width:235px; margin-bottom:40px;}
+#owl-demo8 .item dd:hover .txts{border:3px solid #0d816a;}
+#owl-demo8 .item dd span{  height:30px; line-height:30px; width:150px; padding-left:15px; padding-right:15px; background-color:#fff; display:inline-block; margin-top:-15px;transition:all 0.3s;}
+#owl-demo8 .item dd span label{ display:inline-block; width:100%;height:30px; line-height:30px; text-align:left; text-indent:24px; color:#fff; background:url("../images/i_bg7.png")/*tpa=http://www.lenzhi.com/template/default/images/i_bg7.png*/ #0d816a 113px center no-repeat; font-size:14px; text-transform:uppercase; overflow:hidden; background-size:auto 50%; letter-spacing:1px; }
+#owl-demo8 .item dd:hover span{ margin-left:6px;}
+#owl-demo8 .item dd:hover .h2{ color:#0d816a;}
+
+/*荣誉滚动*/
+.owl-demo9{ width:100%; margin-bottom:10%; margin-top:6%;}
+/* Styling Next and Prev buttons*/
+.owl-demo9.owl-theme .owl-controls{ bottom:8%; height:0;}
+.owl-demo9.owl-theme .owl-controls .owl-pagination{ }
+.owl-demo9.owl-theme .owl-controls .owl-buttons{ position:absolute; bottom:8%; width:100%; left:0; height:0;}
+.owl-demo9.owl-theme .owl-controls .owl-buttons div{color: #FFF;display: inline-block;zoom: 1;*display: inline; width:52px; height:52px;/*IE7 life-saver*/ text-indent:66px;overflow:hidden;-webkit-transition: all 0.3s ease-out 0s;-moz-transition: all 0.3s ease-out 0s;-o-transition: all 0.3s ease-out 0s;transition: all 0.3s ease-out 0s; }
+.owl-demo9.owl-theme .owl-controls .owl-buttons div.owl-prev{background:url("../images/left3.png")/*tpa=http://www.lenzhi.com/template/default/images/left3.png*/ no-repeat; float:left; margin-left:1%; }
+.owl-demo9.owl-theme .owl-controls .owl-buttons div.owl-prev:hover{transition:all 0.3s;opacity:0.8;filter:Alpha(opacity=80);}
+.owl-demo9.owl-theme .owl-controls .owl-buttons div.owl-next{ background:url("../images/right3.png")/*tpa=http://www.lenzhi.com/template/default/images/right3.png*/ no-repeat; float:right; margin-right:1%;}
+.owl-demo9.owl-theme .owl-controls .owl-buttons div.owl-next:hover{transition:all 0.3s;opacity:0.8;filter:Alpha(opacity=80); }
+.owl-demo9.owl-theme .owl-controls .owl-page{ display:inline-block;}
+.owl-demo9 .item{margin:0 5%;}
+.owl-demo9 .item dd { overflow:hidden; margin-bottom:20%;}
+.owl-demo9 .item dd .imgs{overflow:hidden;border:1px solid #e4e4e4;}
+.owl-demo9 .item dd .imgs img{ width:100%;-webkit-transform:scale(1); -moz-transform:scale(1); -ms-transform:scale(1); -o-transform:scale(1); transform:scale(1);-webkit-transition:all 0.3s ease-out 0s; -moz-transition:all 0.3s ease-out 0s; -o-transition:all 0.3s ease-out 0s; transition:all 0.3s ease-out 0s;}
+.owl-demo9 .item dd:hover .imgs img{-webkit-transform:scale(1.1, 1.1); -moz-transform:scale(1.1, 1.1); -o-transform:scale(1.1, 1.1); -ms-transform:scale(1.1, 1.1); transform:scale(1.1, 1.1);}
+.owl-demo9 .item dd:hover .imgs{border:1px solid #6ed0e4;}
+/*.owl-demo9.owl-theme .owl-controls .owl-page span{background:#a3dbe5;}
+.owl-demo9.owl-theme .owl-controls .owl-page.active span{background:#0d816a;}*/
+
+/*视频*/
+.owl-demo10{ width:100%;}
+/* Styling Next and Prev buttons*/
+.owl-demo10.owl-theme .owl-controls{ bottom:8%; height:0;}
+.owl-demo10.owl-theme .owl-controls .owl-pagination{ }
+.owl-demo10.owl-theme .owl-controls .owl-buttons{ position:absolute; bottom:24%; width:100%; left:0; height:0;}
+.owl-demo10.owl-theme .owl-controls .owl-buttons div{color: #FFF;display: inline-block;zoom: 1;*display: inline; width:52px; height:52px;/*IE7 life-saver*/ text-indent:66px;overflow:hidden;-webkit-transition: all 0.3s ease-out 0s;-moz-transition: all 0.3s ease-out 0s;-o-transition: all 0.3s ease-out 0s;transition: all 0.3s ease-out 0s; }
+.owl-demo10.owl-theme .owl-controls .owl-buttons div.owl-prev{background:url("../images/left3.png")/*tpa=http://www.lenzhi.com/template/default/images/left3.png*/ no-repeat; float:left; margin-left:1%; }
+.owl-demo10.owl-theme .owl-controls .owl-buttons div.owl-prev:hover{transition:all 0.3s;opacity:0.8;filter:Alpha(opacity=80);}
+.owl-demo10.owl-theme .owl-controls .owl-buttons div.owl-next{ background:url("../images/right3.png")/*tpa=http://www.lenzhi.com/template/default/images/right3.png*/ no-repeat; float:right; margin-right:1%;}
+.owl-demo10.owl-theme .owl-controls .owl-buttons div.owl-next:hover{transition:all 0.3s;opacity:0.8;filter:Alpha(opacity=80); }
+.owl-demo10.owl-theme .owl-controls .owl-page{ display:inline-block;}
+.owl-demo10 .item{margin:0 2%;}
+.owl-demo10 .item dd { overflow:hidden; padding-bottom:20%;}
+.owl-demo10 .item dd .imgs{width:100%; overflow:hidden;position:relative;}
+.owl-demo10 .item dd .imgs img{ display:block; width:100%;-webkit-transform:scale(1); -moz-transform:scale(1); -ms-transform:scale(1); -o-transform:scale(1); transform:scale(1);-webkit-transition:all 0.3s ease-out 0s; -moz-transition:all 0.3s ease-out 0s; -o-transition:all 0.3s ease-out 0s; transition:all 0.3s ease-out 0s;}
+.owl-demo10 .item dd:hover .imgs img{-webkit-transform:scale(1.1, 1.1); -moz-transform:scale(1.1, 1.1); -o-transform:scale(1.1, 1.1); -ms-transform:scale(1.1, 1.1); transform:scale(1.1, 1.1);}
+.owl-demo10 .item dd .txts{position:absolute; bottom:0; left:0; width:100%; overflow:hidden; height:100%; background:rgba(0, 0, 0,0.3) url("../images/solution_bg1.png")/*tpa=http://www.lenzhi.com/template/default/images/solution_bg1.png*/ center center no-repeat;}
+.owl-demo10 .item dd .h2{ line-height:58px; height:58px; background-color:#0d816a; font-weight:normal;text-align:center; color:#fff; overflow:hidden;}
+
+
+@media screen and (max-width: 1200px) {
+/*产品*/
+#owl-demo5.owl-theme .owl-controls .owl-buttons{ bottom:24.5%;}
+/*产品2*/
+#owl-demo6.owl-theme .owl-controls .owl-buttons{ bottom:24.5%;}
+#owl-demo6.owl-theme .owl-controls .owl-buttons div.owl-next{ margin-right:17.5%;}
+
+}
+
+@media screen and (max-width: 1100px) {
+/*产品*/
+#owl-demo5.owl-theme .owl-controls .owl-buttons{ bottom:22.5%;}
+/*产品2*/
+#owl-demo6.owl-theme .owl-controls .owl-buttons{ bottom:22.5%;}
+#owl-demo6.owl-theme .owl-controls .owl-buttons div.owl-next{ margin-right:18%;}
+/*新闻资讯*/
+#owl-demo8 .item dd .ndate b{ font-size:50px;}
+}
+@media screen and (max-width: 1000px) {
+/*产品*/
+#owl-demo5.owl-theme .owl-controls .owl-buttons{ bottom:20%;}
+/*产品2*/
+#owl-demo6.owl-theme .owl-controls .owl-buttons{ bottom:20%;}
+#owl-demo6.owl-theme .owl-controls .owl-buttons div.owl-next{ margin-right:19%;}
+/*荣誉滚动*/
+.owl-demo9.owl-theme .owl-controls .owl-buttons{ bottom:20%;}
+/*视频*/
+.owl-demo10.owl-theme .owl-controls .owl-buttons{ bottom:29%;}
+}
+@media screen and (max-width: 980px) {
+/*解决方案*/
+#owl-demo7.owl-theme .owl-controls .owl-buttons{ bottom:27%;}
+/*视频*/
+.owl-demo10 .item dd .h2{ height:46px; line-height:46px;}
+}
+@media screen and (max-width: 930px) {
+/*产品*/
+#owl-demo5.owl-theme .owl-controls .owl-buttons{ bottom:18%;}
+/*产品2*/
+#owl-demo6.owl-theme .owl-controls .owl-buttons{ bottom:18%;}
+#owl-demo6.owl-theme .owl-controls .owl-buttons div.owl-next{ margin-right:20%;}
+/*新闻资讯*/
+#owl-demo8 .item dd .ndate{ height:60px; line-height:60px;}
+#owl-demo8 .item dd .ndate b{ font-size:40px;}
+}
+@media screen and (max-width: 830px) {
+/*产品*/
+#owl-demo5.owl-theme .owl-controls .owl-buttons{ bottom:5%;}
+#owl-demo5.owl-theme .owl-controls .owl-buttons div.owl-next{ margin-right:8%;}
+#owl-demo5 .item dd .imgs{ float:none; width:96%; margin-top:9%; background-size:100% 100%; }
+#owl-demo5 .item dd .txts{ position:inherit; width:96%; overflow:hidden; margin-bottom:2%; margin-top:2%;}
+#owl-demo5 .item dd .txts .imgs3{ float:none; margin:0 auto; width:26%; margin-top:3%;}
+#owl-demo5 .item dd .txts .imgs3 img{ margin-left:0; width:100%;}
+#owl-demo5 .item dd .txts .cons{ float:none; margin-left:4%; width:92%; margin-bottom:6%;}
+#owl-demo5 .item dd .txts .cons h2{ margin-top:5%;}
+#owl-demo5 .item dd .txts .cons p{ height:auto;}
+#owl-demo5 .item dd .txts label{ font-size:13px;}
+/*产品2*/
+#owl-demo6.owl-theme .owl-controls .owl-buttons{ bottom:5%;text-align:right;}
+#owl-demo6.owl-theme .owl-controls .owl-buttons div.owl-next{ margin-right:8%;}
+#owl-demo6 .item dd .imgs{ float:none; width:96%; margin-top:9%; background-size:100% 100%; }
+#owl-demo6 .item dd .txts{ position:inherit; width:96%; overflow:hidden; margin-bottom:2%; margin-top:2%;}
+#owl-demo6 .item dd .txts .imgs3{ float:none; margin:0 auto; width:26%; margin-top:3%;}
+#owl-demo6 .item dd .txts .imgs3 img{ margin-right:0; width:100%;}
+#owl-demo6 .item dd .txts .cons{ float:none; margin-left:4%; width:92%; margin-bottom:6%;}
+#owl-demo6 .item dd .txts .cons h2{ margin-top:5%;}
+#owl-demo6 .item dd .txts .cons p{ height:auto;}
+#owl-demo6 .item dd .txts label{ font-size:13px;}
+/*荣誉滚动*/
+.owl-demo9.owl-theme .owl-controls .owl-buttons{ bottom:22%;}
+/*视频*/
+.owl-demo10.owl-theme .owl-controls .owl-buttons{ bottom:35%;}
+}
+@media screen and (max-width: 780px) {
+.flash_div{ display:block;}
+#slider{ display:none;}
+/*产品*/
+#owl-demo5 .item dd .imgs{ width:95%;}
+#owl-demo5 .item dd .txts{ width:95%;}
+/*产品2*/
+#owl-demo6.owl-theme .owl-controls .owl-buttons div.owl-next{ margin-right:9%;}
+#owl-demo6 .item dd .imgs{ width:95%;}
+#owl-demo6 .item dd .txts{ width:95%;}
+/*荣誉滚动*/
+.owl-demo9.owl-theme .owl-controls .owl-buttons{ bottom:30%;}
+.owl-demo9.owl-theme .owl-controls .owl-buttons div{ width:40px; height:40px;}
+.owl-demo9.owl-theme .owl-controls .owl-buttons div.owl-prev{ background-size:100% 100%; margin-left:1.5%;}
+.owl-demo9.owl-theme .owl-controls .owl-buttons div.owl-next{ background-size:100% 100%; margin-right:1.5%;}
+
+/*视频*/
+.owl-demo10.owl-theme .owl-controls .owl-buttons{ bottom:50%;}
+.owl-demo10.owl-theme .owl-controls .owl-buttons div{ width:40px; height:40px;}
+.owl-demo10.owl-theme .owl-controls .owl-buttons div.owl-prev{ background-size:100% 100%; margin-left:2%;}
+.owl-demo10.owl-theme .owl-controls .owl-buttons div.owl-next{ background-size:100% 100%; margin-right:2%}
+}
+@media screen and (max-width: 640px) {
+/*解决方案*/
+#owl-demo7.owl-theme .owl-controls .owl-buttons{ bottom:29%;}
+#owl-demo7.owl-theme .owl-controls .owl-buttons div{ width:50px; height:50px;}
+#owl-demo7.owl-theme .owl-controls .owl-buttons div.owl-prev{ background-size:100% 100%;}
+#owl-demo7.owl-theme .owl-controls .owl-buttons div.owl-next{ background-size:100% 100%;}
+#owl-demo7 .item dd .txts h2{ margin-top:12%;}
+#owl-demo7 .item dd .txts span{ margin-top:5%; font-size:13px;width:15px; height:100px; overflow:hidden;letter-spacing:0; text-align:left;}
+#owl-demo7 .item dd .txts2{ background-size:40% auto;}
+/*新闻资讯*/
+#owl-demo8 .item dd .txts{ border-width:2px;}
+#owl-demo8 .item dd:hover .txts{ border-width:2px;}
+#owl-demo8 .item dd .ndate{ height:50px; line-height:50px;}
+#owl-demo8 .item dd .ndate b{ font-size:36px;}
+#owl-demo8 .item dd .h2{ font-size:14px;}
+#owl-demo8 .item dd .p{ font-size:12px;}
+#owl-demo8 .item dd span label{ font-size:12px;}
+}
+@media screen and (max-width: 480px) {
+/*产品*/
+#owl-demo5 .item dd .imgs{background-size:auto; padding-right:6px; padding-bottom:6px;}
+#owl-demo5 .item dd .txts .cons h2{ margin-bottom:3%;}
+#owl-demo5 .item dd .txts label{ font-size:12px;}
+/*产品2*/
+#owl-demo6 .item dd .imgs{background-size:auto; padding-right:6px; padding-bottom:6px;}
+#owl-demo6 .item dd .txts .cons h2{ margin-bottom:3%;}
+#owl-demo6 .item dd .txts label{ font-size:12px;}
+
+/*解决方案*/
+#owl-demo7.owl-theme .owl-controls .owl-buttons div{ width:40px; height:40px;}
+#owl-demo7 .item dd .txts h2{ height:40px; line-height:40px; margin-top:5%;}
+#owl-demo7 .item dd .txts span{ font-size:12px; margin-top:10%; }
+/*新闻资讯*/
+#owl-demo8 .item dd .ndate b{ font-size:32px;}
+#owl-demo8 .item dd .p{ margin-bottom:30px;}
+#owl-demo8 .item dd span{ width:130px;}
+#owl-demo8 .item dd span label{ letter-spacing:0; background-position:100px center;}
+/*荣誉滚动*/
+.owl-demo9.owl-theme .owl-controls .owl-buttons{ bottom:40%;}
+.owl-demo9.owl-theme .owl-controls .owl-buttons div{ width:30px; height:30px;}
+.owl-demo9.owl-theme .owl-controls .owl-buttons div.owl-prev{ margin-left:2%;}
+.owl-demo9.owl-theme .owl-controls .owl-buttons div.owl-next{ margin-right:2%;}
+/*视频*/
+.owl-demo10.owl-theme .owl-controls .owl-buttons div{ width:30px; height:30px;}
+.owl-demo10 .item dd .h2{ height:40px; line-height:40px;}
+}
+
+@media screen and (max-width: 360px) {
+/*解决方案*/
+#owl-demo7.owl-theme .owl-controls .owl-buttons div{ width:30px; height:30px;}
+#owl-demo7 .item dd .txts h2{ height:36px; line-height:36px; margin-top:3%;}
+/*视频*/
+.owl-demo10 .item dd .h2{ height:36px; line-height:36px;}
+}

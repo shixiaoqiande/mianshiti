@@ -1,0 +1,341 @@
+@import url("anim.css")/*tpa=http://www.lenzhi.com/template/default/css/anim.css*/;
+@import url("lrtk3.css")/*tpa=http://www.lenzhi.com/template/default/css/lrtk3.css*/;
+*{margin:0;padding:0;border:0;}
+body {background-color: #fff; overflow-x:hidden;color: #333;font-size: 12px; font-family: "思源黑体 Bold Bold","Arial", "Microsoft YaHei","Helvetica Neue", "Helvetica", "Arial", "sans-serif";}
+a { color: #333;
+  text-decoration: none;-webkit-tap-highlight-color:transparent;
+  /*-webkit-transition: transform 0.3s ease, text-decoration 0.3s ease, color 0.3s, background 0.3s ease, text-indent 0.3s ease;
+  -moz-transition: transform 0.3s ease, text-decoration 0.3s ease, color 0.3s, background 0.3s ease, text-indent 0.3s ease;
+  transition: transform 0.3s ease, text-decoration 0.3s ease, color 0.3s, background 0.3s ease, text-indent 0.3s ease;*/
+}
+a:hover {color: #468bc0;/*text-decoration: underline;*/}
+input,select,img{vertical-align:middle;}
+ul,li{ list-style:none;}
+em, cite, th { font-style: normal; font-weight: normal; font-style:normal;}
+.wrap{clear:both; width:96%;max-width:1200px;margin:0 auto;text-align:left;zoom:1; overflow:hidden;}
+.wrap2{clear:both; width:96%;max-width:1200px;margin:0 auto;text-align:left;zoom:1;}
+.wrap3{clear:both; width:94%;max-width:1000px;margin:0 auto;text-align:left;zoom:1; overflow:hidden;}
+.divhidden{ display:none;}
+.l{ float:left;}
+.r{float:right;}
+.c_l{ clear:both; height:0px; font-size:0px; overflow:hidden;}
+.f36{ font-size:36px;}
+.f30{ font-size:30px;}
+.f28{ font-size:28px;}
+.f26{ font-size:26px;}
+.f24{ font-size:24px;}
+.f20{ font-size:20px;}
+.f18{ font-size:18px;}
+
+/*PC导航*/
+.header-v1{ width:100%; /*position:absolute;* position:fixed; /*overflow:hidden; */ z-index:10; /*box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);*/}
+/*.nav-hide .header-v1{ height:70px;}
+.nav-hide .blank_h{ height:70px;}*/
+.nav-hide .header-v1 .top-main .logo1 img{ height:130px;}
+.header-v1 .header_one{ height:45px; line-height:45px; overflow:hidden; background-color:#f3f3f3; color:#636363; font-size:14px;}
+.header-v1 .header_one a{ color:#ec2029;}
+.header-v1 .header_one a:hover{transition:all 0.3s;filter: Alpha(Opacity=60);opacity: 0.6;}
+.header-v1 .header_one .r{ font-size:14px; background:url("images/top_pic5.png")/*tpa=http://www.lenzhi.com/template/default/css/images/top_pic5.png*/ left center no-repeat; padding-left:36px;color:#ec2029;}
+/*.nav-hide  .header-v1 .header_one{ display:none;}*/
+.header-v1 .top-main{ width:98%; max-width:1200px; margin:0 auto;/* position:relative;*/}
+.header-v1 .top-main .logo1{ float:left; height:12%;}
+.header-v1 .top-main .logo1 img{ height:100%;}
+.header-v1 .top-main .logo1 img:hover{transition:all 0.3s;filter: Alpha(Opacity=96);opacity: 0.96;}
+.header-v1 .top-main .top_r{ float:right;}
+.top_a{ float:right;height:64px; line-height:64px; background:url("../images/top_bg1.png")/*tpa=http://www.lenzhi.com/template/default/images/top_bg1.png*/ left center no-repeat; padding-left:34px;}
+.nav-hide .top_a{ height:54px; line-height:54px;}
+.top_a a{ display:block; color: #ffffff; font-weight:bold; font-size:22px; }
+.top_a a:hover{transition:all 0.3s;filter: Alpha(Opacity=60);opacity: 0.6; }
+
+
+
+.header-v1 .a{ float:right; margin-right:20px; height:64px; line-height:64px; font-size:14px;}
+.nav-hide .header-v1 .a{ height:54px; line-height:54px;}
+/*.header-v1 .languages{ float:right; position:relative; display:block;font-size:12px; color:#707070;height:38px;line-height:38px; padding-left:18px; text-align:right;font-family:"宋休"; text-decoration:none;margin-left:10px; background:url(../images/top_pic2.png) left center no-repeat; margin-top:29px;transition:all 0.3s;}
+.header-v1 .languages:hover{margin-top:25px;}
+.nav-hide .header-v1 .languages{ margin-top:22px;}
+.nav-hide .header-v1 .languages:Hover{ margin-top:18px;}
+.header-v1 .languages:Hover{transition:all 0.3s;filter: Alpha(Opacity=80);opacity: 0.8;}*/
+/*.header-v1 .languages:after{left: 1%;right: 1%;opacity: 1;-webkit-transition: all .5s;-o-transition: all .5s;-ms-transition: all .5s;transition: all .5s;}
+.header-v1 .languages:after{content: "";display: block;position: absolute;left: 50%;right: 50%;bottom: -1px;height:4px;opacity: 0;background-color: #c71d32;-webkit-transition: all .5s;-o-transition: all .5s;-ms-transition: all .5s;transition: all .5s;}
+.header-v1 .languages:hover:after{left: 1%;right: 1%;opacity: 1;-webkit-transition: all .5s;-o-transition: all .5s;-ms-transition: all .5s;transition: all .5s;}*/
+.header-v1 .top-main .top-main-content{ float:right; /*margin-top:31px;*/ width:80%;}
+.navBar{ clear:both;}
+.nav{ list-style:none; padding:0;  }
+.nav .m{ float:right;  width:14%;  position:relative;}
+.nav .m:last-child{ background:none;}
+.nav a:hover{ text-decoration:none; /*color:#fff;*/}
+.nav li:hover span{transform:translateY(-100%);color:#fff;}
+.nav h3{ float:right; font-weight:normal; font-size:16px; height:48px; overflow:hidden; text-align:center;  position:relative; }
+.nav h3 a{float:left; color:#ffffff;line-height:48px; font-size:16px; text-transform:uppercase;}
+.nav h3 a span{ display:block;position:relative;transition: all 0.3s;height:48px; text-transform:uppercase;}
+/*.nav-hide .nav h3 a span{ height:70px;}*/
+.nav h3 a span:after{content:attr(data-title);position:absolute;/*color:#fff;*/left:0;transform:translateY(100%);width:100%;top:0; color:#88ba12;}
+/*.nav h3 a i{ width:9px; height:5px; background:url(../images/top_pic5.png) no-repeat; display:inline-block; margin-left:7px;}*/
+/*.nav-hide .nav{}
+.nav-hide .nav h3{ height:70px;}
+.nav-hide .nav h3 a{ line-height:70px;}*/
+.nav .on{}
+.nav .on h3 a{/* height:42px; line-height:42px; */color:#88ba12; /*background:url(../images/top_bg.png) center bottom no-repeat;*/}
+.nav .on h3 a i{ background:url("../images/top_pic6.png")/*tpa=http://www.lenzhi.com/template/default/images/top_pic6.png*/ no-repeat; }
+.nav .on h3 a span{ color:#88ba12;}
+.nav li.on a:after{left: 0%;right: 0%;opacity: 1;-webkit-transition: all .5s;-o-transition: all .5s;-ms-transition: all .5s;transition: all .5s;}
+.nav li h3 a:after{content: "";display: block;position: absolute;left: 50%;right: 50%; /*margin-left:5px; margin-right:5px;*/bottom: 0px;height:2px;opacity: 0;background-color: #88ba12;-webkit-transition: all .5s;
+-o-transition: all .5s;-ms-transition: all .5s;transition: all .5s;}
+.nav li h3 a:hover:after{opacity: 1;-webkit-transition: all .5s;-o-transition: all .5s;-ms-transition: all .5s;transition: all .5s;}
+.nav .sub{ display:none; width:80%;  padding:0; position:absolute; background:rgba(45, 42, 48, 0.8);/* top:87px;*/ top:46px;/* overflow:hidden;*/ text-align:center; z-index:110; left:35%; border-top:2px solid #88ba12;}
+/*.nav-hide .nav li h3 a:after{ bottom:13px;}
+.nav-hide .nav .sub{top:70px;}*/
+.nav .sub li{ vertical-align:middle; list-style:none; text-decoration:none; display:inline-block;line-height:50px;font-size:14px;width:100%; text-transform:uppercase;}
+.nav .sub li span{ display:block; height:38px; position:relative;}
+.nav .sub li a{ text-decoration:none; background:none; color:#ffffff; border-bottom:1px solid #e0e0e0; display:block;}
+.nav .sub li:last-child a{ border-bottom:0;}
+.nav .sub li:last-child a:hover{ border-bottom:0;}
+.nav .sub li a:hover{ color:#88ba12;border-bottom:1px solid #88ba12;}
+.nav .sub li:hover img{transition:all 0.3s;opacity:0.8;filter:Alpha(opacity=80);}
+.nav .sub li dl{ display:none; background:url("../images/top_bg2.png")/*tpa=http://www.lenzhi.com/template/default/images/top_bg2.png*/ left top no-repeat; width:165px; position:absolute; top:0; left:100%;}
+.nav .sub li dl dd{ display:block;}
+.nav .sub li span:hover dl{ display:block;}
+
+.blank_h{ height:80px; overflow:hidden;}
+.top_search{ float:right;height:80px; width:34px; position:relative;}
+/*.nav-hide .top_search{ height:70px;}*/
+.top_search .input1{ width:83%; text-indent:10px; line-height:30px; height:30px; outline:medium; background:none; color:#9c9c9c; text-align:left; font-size:13px; border:0;}
+.top_search em{height:100%; width:100%; background:url("../images/top_pic1.png")/*tpa=http://www.lenzhi.com/template/default/images/top_pic1.png*/ center center no-repeat; cursor:pointer; display:block;}
+.top_search em:Hover{transition:all 0.3s;opacity:0.8;filter:Alpha(opacity=80);}
+.top_search .search_con{ display:none;position:absolute; bottom:-73px;right:0px; width:300px; height:0px; padding-top:23px; padding-bottom:19px; background:url("../images/top_bg2.png")/*tpa=http://www.lenzhi.com/template/default/images/top_bg2.png*/ no-repeat;z-index:100;/* border:1px solid #eee;box-shadow: 0px 3px 13px 0px rgba(0, 0, 0, 0.2);border-radius: 2px;*/}
+.top_search .search_con .input1{ height:39px; line-height:39px; background:#f8f8f8; border:0; padding-left:5px; margin-left:16px; padding-right:47px; width:174px; float:left; outline:none;}
+.top_search .search_con .bnts{ float:left; width:40px; height:39px; background:url("../images/top_pic3.png")/*tpa=http://www.lenzhi.com/template/default/images/top_pic3.png*/ no-repeat; cursor:pointer;}
+.top_search .search_con .bnts:hover{transition:all 0.3s;background:url("../images/top_pic4.png")/*tpa=http://www.lenzhi.com/template/default/images/top_pic4.png*/ no-repeat;}
+
+/* 手机导航全局 */
+.touch-top{ width:100%; position:absolute; top:0; z-index:99; /*background:#fff; */display:none;/*box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);*/transition:all 0.3s;}
+.touch-top.bgs1{background:#fff;}
+.touch_bg{width:100%; position:fixed; top:0; z-index:8;background:#0d816a;display:none;filter: Alpha(Opacity=60);/*IE7 fix*/opacity: 0.6; height:100%;}
+.touch-top-wrapper{ width:96%; margin:0 auto;}
+.touch-top-wrapper .touch-logo{ float:left;}
+.touch-top-wrapper .touch-logo img{height: 150px;display: block;}
+.touch-navigation { display:block; }
+
+	.touch-toggle { position:absolute; right:10px; top:0; }
+
+	.touch-toggle li { float:left; height:70px; padding:0 6px; text-align:center; }
+
+	.touch-toggle li a { height:70px; }
+
+	.touch-toggle li:hover, .touch-toggle li:active { }
+
+	.touch-toggle .touch-toggle-item-first { border-left:none; }
+
+	.touch-toggle .touch-toggle-item-last { border-right:none; }
+
+	.touch-toggle li a { display:block; font-size:12px; }	
+
+	.touch-toggle li i { display:inline-block; width:32px; height:32px; overflow:hidden; /*margin-top:20px;*/margin-top:30px; background-repeat:no-repeat; background-position:center center; background-size:contain; }
+
+	.touch-toggle .touch-icon-language { background-image:url("../images/touch-icon-language.png")/*tpa=http://www.lenzhi.com/template/default/images/touch-icon-language.png*/; }
+
+	.touch-toggle .touch-icon-user { background-image:url("../images/i_bg5.png")/*tpa=http://www.lenzhi.com/template/default/images/i_bg5.png*/; }
+
+	.touch-toggle .touch-icon-search { background-image:url("../images/head_pic2.png")/*tpa=http://www.lenzhi.com/template/default/images/head_pic2.png*/; }
+
+	.touch-toggle .touch-icon-menu { background-image:url("../images/head_pic1.png")/*tpa=http://www.lenzhi.com/template/default/images/head_pic1.png*/; }
+	.touch-toggle .touch-icon-close { background-image:url("../images/head_pic4.png")/*tpa=http://www.lenzhi.com/template/default/images/head_pic4.png*/; background-size:16px 16px; }
+
+	.touch-toggle li span { display:none; text-align:center; }
+	.drawer-section {/* background-color:#40312f; padding:20px;*/ display:none; }	
+
+	.drawer-section-menu {/* padding:20px 20px 35px;*/  /*padding:0px 0px 35px;*/}
+
+	.touch-toggle-content{ clear:both;}
+	.touch-menu{ clear:both;}
+	.touch-menu ul li { border-bottom:1px solid #eee; position:relative; }
+
+	.touch-menu ul li a { color:#333; display:block; font-size:18px; height:48px; line-height:48px;/* padding-left:10px;*/  padding-left:2%;}
+
+	.touch-menu ul li a:hover, .touch-menu ul li a:active { background-color:#0d816a; color:#fff; }	
+
+	.touch-menu ul li i { position:absolute; top:14px;/* right:5px;*/ right:25px;  display:block; width:13px; height:13px; overflow:hidden; background-position:center center; background-repeat:no-repeat; background-size:contain; }
+
+	.touch-menu ul li i.touch-arrow-right { display:none; background-image:url("../images/touch-arrow-r.png")/*tpa=http://www.lenzhi.com/template/default/images/touch-arrow-r.png*/; }
+
+	.touch-menu ul li i.touch-arrow-down { background-image:url("../images/touch-arrow-d.png")/*tpa=http://www.lenzhi.com/template/default/images/touch-arrow-d.png*/; }
+
+	.touch-menu ul li i.touch-arrow-up { background-image:url("../images/touch-arrow-u.png")/*tpa=http://www.lenzhi.com/template/default/images/touch-arrow-u.png*/; }
+	.touch-menu ul li a:hover i.touch-arrow-down {background-image:url("../images/touch-arrow-d2.png")/*tpa=http://www.lenzhi.com/template/default/images/touch-arrow-d2.png*/; }
+	.touch-menu ul li a:hover i.touch-arrow-up {background-image:url("../images/touch-arrow-u2.png")/*tpa=http://www.lenzhi.com/template/default/images/touch-arrow-u2.png*/; }
+
+	.touch-menu ul ul { display:none; margin:0;/* padding:0 10px 30px 30px;*/ padding:0 0px 30px 0px; }
+
+	.touch-menu ul ul li { border-bottom:none; margin:0; padding:0; }
+
+	.touch-menu ul ul li a { padding:0; padding-left:3%; font-size:16px; height:38px; line-height:38px; text-transform:uppercase; }		
+
+	.touch-menu ul ul li i { top:13px; }
+.touch-menu .closetitle{ padding-top:10px; padding-bottom:12px; text-align:center;}
+.touch-menu .closetitle img{ margin:0 auto;  height:20px; width:auto;}
+/*手机弹出搜索*/
+.search_div{ clear:both; width:100%;  overflow:hidden;padding-top:2%; padding-bottom:2%; display:none; /*z-index:999;*/}
+.search_div .search_con{ width:92%; margin:0 auto; border:1px solid #cdcdcd; height:40px; line-height:40px;}
+.search_div .search_con .input1{ text-indent:15px; width:88%; float:left; border:0; background:none; height:100%; font-size:16px; outline:none; color:#bbb;}
+.search_div .search_con .bnt1{-webkit-appearance: none; float:right; width:12%; max-width:60px; background:url("../images/head_pic2.png")/*tpa=http://www.lenzhi.com/template/default/images/head_pic2.png*/ 50% center no-repeat; background-size:auto 55%; border:0; height:100%; cursor:pointer;}
+
+
+/*尾部*/
+.f_bg{overflow:hidden; background:url("../images/foot_bg1.jpg")/*tpa=http://www.lenzhi.com/template/default/images/foot_bg1.jpg*/ center top no-repeat; color:#fff; font-size:12px; clear:both; padding-top:36px; padding-bottom:20px;}
+.f_bg_div{ width:96%; max-width:1200px; margin:0 auto;}
+.f_bg a{color:#fff; text-decoration:none;}
+.f_bg a:hover{ color:#1685a0;}
+.f_bg .f_r_l{overflow:hidden; float:left;}
+.f_bg .f_r_l .f_tel{ height:48px; overflow:hidden;background:url("../images/foot_bg2.png")/*tpa=http://www.lenzhi.com/template/default/images/foot_bg2.png*/ left center no-repeat; padding-left:58px; line-height:20px; margin-bottom:8%;}
+.f_bg .f_r_l .f_tel a{ font-weight:bold; line-height:28px; color:#fff;}
+.f_bg .f_r_l .f_tel a:hover{transition:all 0.3s;filter: Alpha(Opacity=80);opacity: 0.8;}
+.f_bg .f_r_l .f_txt{ line-height:24px; overflow:hidden;}
+.f_bg .f_r_l .f_txt2{ line-height:24px; overflow:hidden;color:#ffffff; margin-top:1%;}
+.f_bg .f_r_l .f_txt2 a{color:#ffffff;}
+.f_bg .f_r_l .f_txt2 a:hover{transition:all 0.3s;filter: Alpha(Opacity=80);opacity: 0.8;}
+
+.f_bg .f_div2_r2{ float:right; padding-right:9px;margin-left:1%; text-align:center; font-size:12px;line-height:36px; }
+.f_bg .f_div2_r2 img{ display:block; width:126px; margin:0 auto; }
+.f_bg .f_div2_r{ float:left;  overflow:hidden; width:15.3%; max-width:184px; text-align:center; margin-right:3%;}
+.f_bg .f_div2_r .logo2{ max-width:68px; width:80%;}
+.f_bg .f_r{ overflow:hidden;}
+
+
+.gotop{ position:fixed; bottom:10%; right:1%; width:50px; height:50px; background:url("../images/gotop.png")/*tpa=http://www.lenzhi.com/template/default/images/gotop.png*/ no-repeat; background-size:100% 100%;
+-webkit-transition:all 0.5s ease-in-out; -moz-transition:all 0.5s ease-in-out; -ms-transition:all 0.5s ease-in-out;
+-o-transition:all 0.5s ease-in-out; transition:all 0.5s ease-in-out; display:none;}
+.gotop:hover{-webkit-transform:rotate(360deg); -ms-transform:rotate(360deg); -o-transform:rotate(360deg); -moz-transform:rotate(360deg); cursor:pointer; transform:rotate(360deg);}
+
+.right_ul{ height:46px; line-height:46px; overflow:hidden; border-top:2px solid #dedede; position:fixed; width:100%; bottom:0; left:0; display:none; background-color:#fff;}
+.right_ul ul li{ width:25%; float:left; overflow:hidden; text-align:center; font-size:14px;}
+.right_ul ul li img{ height:22px; margin:0 auto;}
+.right_ul ul li a{ display:block; border-right:1px solid #dedede;}
+.right_ul ul li:last-child a{ border:0;}
+
+/*微信弹窗*/
+#hidden{z-index: 2147483647;display: none; background: #000; filter: alpha(opacity=0); left: 0px; opacity: 0; position: fixed; width: 3000px; height: 100%; padding-top: 28%; text-align: center; top:0;}
+#hiddenimg{opacity:1  ; display:none; position:fixed;left:0%; width:100%; height:300px;padding-top:0;z-index:2147483647; top:28%; text-align:center;}
+#hiddenimg img{ width:90%;max-width:300px; margin:0 auto; }
+#hiddenimg2{text-align: center;}
+.weixinclose{ position:fixed; right:2%; top:2%; color:#fff; font-size:30px; cursor:pointer; z-index:2147483648; font-weight:normal; display:none;}
+
+.i_blank{ height:60px; overflow:hidden; display:none;}
+.foot_div{ height:60px; width:100%; position:fixed; bottom:0;/* background:url(../images/foot_bg70.png) repeat;*/ background-color:#fff;z-index:2; font-size:14px; border-top:1px solid #f2f2f2;box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15); display:none;}
+.foot_div.bgs2{ background:#f1f1f1;z-index:3; border-top:1px solid #d8d8d8;}
+.foot_div.bgs3{background:url("../images/foot2_bg70.png")/*tpa=http://www.lenzhi.com/template/default/images/foot2_bg70.png*/ repeat;}
+.foot_div.bgs4{ background:#f1f1f1;}
+.foot_div ul li a{ display:block; width:100%; height:100%; color:#666666;}
+.foot_div ul li{ width:33.33%; text-align:center; float:left; position:relative; height:60px;/*background:url(../images/i_bg11.png) right center repeat-y;*/}
+.foot_div ul li:last-child{ background:none;}
+.foot_div ul li img{ display:block; height:22px; margin:0 auto; margin-top:8px; margin-bottom:5px;}
+.foot_div ul li p{ background:url("../images/foot_pic4.png")/*tpa=http://www.lenzhi.com/template/default/images/foot_pic4.png*/ right 98% no-repeat; height:62px; padding-bottom:50px; position:absolute; bottom:0; width:50%; margin-left:25%; cursor:pointer; height:0;}
+.foot_div ul li p a{ width:100%;line-height:30px; height:30px; overflow:hidden; margin-bottom:1px; background:url("../images/foot_bg60.png")/*tpa=http://www.lenzhi.com/template/default/images/foot_bg60.png*/ repeat; font-size:14px; display:none;}
+
+@media screen and (max-width: 1310px) {
+/*PC导航*/
+/*.nav .m{ width:100px;}
+.header-v1 .top-main .top_r{ display:none;}*/
+.header-v1 .top-main .logo1 img{ height:200px;}
+
+}
+@media screen and (max-width: 1200px) {
+/*尾部*/
+.f_bg{ background-position:46%;}
+}
+@media screen and (max-width: 1100px) {
+.f36{ font-size:32px;}
+.f30{ font-size:28px;}
+.f28{ font-size:24px;}
+.f26{ font-size:22px;}
+.f24{ font-size:20px;}
+.f20{ font-size:18px;}
+.f18{ font-size:16px;}
+/*尾部*/
+.f_bg{ background-position:44%;}
+.f_bg .f_div2_r{ width:13%;}
+}
+@media screen and (max-width: 1000px) {
+.f30{ font-size:26px;}
+/*尾部*/
+.f_bg{ background-position:42%;}
+}
+@media screen and (max-width: 960px) {
+.f36{ font-size:29px;}
+.f30{ font-size:24px;}
+.f28{ font-size:22px;}
+.f26{ font-size:20px;}
+.f24{ font-size:18px;}
+.f20{ font-size:16px;}
+.f18{ font-size:14px;}
+/* 手机导航全局 */
+.blank_h{ height:90px;}
+/*.nav-hide .blank_h{ height:90px;}*/
+.header-v1{ display:none;}
+.touch-top{ display:block;}
+.top_search{ width:90%; overflow:hidden; margin-bottom:10px; margin-top:0;background:url("../images/search_bg.png")/*tpa=http://www.lenzhi.com/template/default/images/search_bg.png*/ #eee right center no-repeat; margin-right:5%;}
+/*尾部*/
+.f_bg{ background:#0d816a;}
+.f_bg .f_div2_r{ display:none;}
+
+.i_blank{ display:block;}
+.foot_div{ display:block;}
+
+}
+@media screen and (max-width: 830px) {
+.f28{ font-size:18px;}
+/* 手机导航全局 */
+.touch-top-wrapper .touch-logo img{height: 120px;}
+
+}
+@media screen and (max-width: 780px) {
+/*右边浮动客服*/
+.side{ display:none;}
+.right_ul{ display:block;}
+/*尾部*/
+.gotop{ display:block;}
+.f_bg .f_div2_r2{ padding-right:0; margin-left:0;}
+.f_bg .f_div2_r2 img{ width:100px;}
+}
+
+@media screen and (max-width: 640px) {
+.f36{ font-size:24px;}
+.f30{ font-size:20px;}
+.f28{ font-size:18px;}
+.f26{ font-size:17px;}
+.f24{ font-size:16px;}
+.f20{ font-size:14px;}
+.f18{ font-size:13px;}
+/* 手机导航全局 */
+.blank_h{ height:80px;}
+/*.nav-hide .blank_h{ height:80px;}*/
+.touch-top-wrapper .touch-logo img{ height:120px;}
+.touch-toggle li i{ margin-top:20px;}
+.touch-menu ul li a{ font-size:16px; height:40px; line-height:40px;}
+.touch-menu ul ul li a{ font-size:14px;}
+/*尾部*/
+.f_bg{ padding-top:26px; padding-bottom:15px;}
+.f_bg .f_r_l{ float:none;}
+.f_bg .f_div2_r2{ float:none; display:inline-block; margin-top:2%;}
+
+}
+
+@media screen and (max-width: 480px) {
+.f28{ font-size:16px;}
+.f26{ font-size:15px;}
+/* 手机导航全局 */
+.blank_h{ height:70px;}
+/*.nav-hide .blank_h{ height:70px;}*/
+.touch-top-wrapper .touch-logo img{ height:100px;}
+.touch-toggle li{ padding-left:4px; padding-right:4px;}
+.touch-toggle li i{ width:26px; height:26px; margin-top:23px;}
+/*.touch-menu ul li a{ font-size:14px; height:36px; line-height:36px;}
+.touch-menu ul ul li a{ font-size:13px;}*/
+/*尾部*/
+.f_bg{ padding-top:20px; padding-bottom:10px;}
+
+}
+
+@media screen and (max-width: 360px) {
+
+}

@@ -1,0 +1,1 @@
+webpackJsonp([24],{"8wEK":function(e,n){},"k/py":function(e,n,t){"use strict";var u=t("XvBR");t("GSQ4"),t("8wEK"),t("5wJx"),t("HUkS");new u({el:"#aboutHeygears",name:"aboutHeygears",delimiters:["#{","}"],data:function(){return{}},updated:function(){},mounted:function(){},methods:{}})}},["k/py"]);

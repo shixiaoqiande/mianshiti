@@ -120,9 +120,23 @@
 				display: table-cell;
 				vertical-align: middle;
 			}*/
+		.a{
+			font-size: 12px;
+		}
+		html,body{-webkit-text-size-adjust:none;}
+		.b{
+			/*font-size: 20px;*/
+			/*-webkit-transform:scale(0.5);*/
+			/* 现在不支持了 */
+			/*font-size: 10px;*/
+			/*-webkit-text-size-adjust:none;*/
+		}
 	</style>
 </head>
 <body>
+	<!-- 怎么让谷歌支持小于12px的文字 -->
+		<!-- <p class="a">我是一个文字大小等于12px的盒子</p> -->
+		<!-- <p class="b">我是一个文字大小小于12px的盒子</p> -->
 	<!-- 清除浮动 https://www.cnblogs.com/nxl0908/p/7245460.html -->
 		<!-- 1. 父级div定义伪类 after 和 zoom -->
 			<!-- <div class="div1">
@@ -272,18 +286,23 @@
 				主要用于兼容
 		 -->
 
-	<!-- HTML 与 XHTML的区别 -->
-		<!--  -->
 
 	<!-- translation 和 动画的区别 -->
-		<!--  -->
+		<!-- 
+			
+		 -->
 
 	<!-- 处理1px的方法 -->
+		<!-- 
+			在媒体查询时 设置为 0.5px;
+			 border-image ;
+			使用 tranfrom: scale(0.5);
+		 -->
 
 	<!-- 调用css时，用link 和 @import url 有什么区别 -->
 		<!-- 
 			link 会在页面显示之前加载完全
-			@import url() 在读取完文件之后加载 所以可能页面加载的瞬间会有闪烁 容易出现兼容问题
+			@import url() 在读取完文件之后加载 所以可能页面加载的瞬间会有闪烁 容易出现兼容问题IE5以下不兼容
 			使用js操作dom时只能用link 因为@import不是dom可以控制的
 			link 还可以 定义rel连接属性 加载 rss  @import只能加载css
 		 -->
@@ -307,9 +326,45 @@
 	<!-- 什么是外边距重叠？重叠的结果是什么？ -->
 		<!-- 
 			水平没有 垂直会重叠
-			两个相邻的外边距都是正数时，折叠结果是它们两者之间较大的值。
+			两个相邻的外边距都是正数时，折叠结果是它们两 者之间较大的值。
 			两个相邻的外边距都是负数时，折叠结果是两者绝对值的较大值。
 			两个外边距一正一负时，折叠结果是两者的相加的和。
 		 -->
+
+	<!-- bootstrap 的十二栅格原理 -->
+		<!-- @media
+			要有 .container 或 .container-fluid
+			.row .col-lg/md/sm/1g-份数
+		 -->
+
+	<!-- transition 和 margin 的百分比根据什么计算 -->
+		<!-- 
+			transition 目标元素
+			margin 父元素
+		 -->
+
+	<!-- cookie session 区别 -->
+		<!-- 
+			cookie 4k 自定义时间  浏览器
+			session    关闭  服务器
+		 -->
+
+	<!-- css3函数 -->
+		<!-- 
+			calc() 就是calculate的缩写，运算。支持 “+”, “-“, “*”, “/” 运算，使用标准的数学运算优先级规则，要注意运算符前后要有个空格。例如：
+			width: calc(100% - 100px);
+			toggle
+			translate()
+			url()
+			rgba()
+		 -->
+
+	<!-- css3动画 和 jq动画的区别 -->
+		<!-- 
+			单位 秒 毫秒
+			一个是补间动画 一个是帧动画 
+		 -->
+
+		
 </body>
 </html>

@@ -43,14 +43,29 @@
 				// 	}
 				// 	return p + n
 				// })
-				// console.log(result)
-			// 3. 正则
-				// let ze = /_(\w)/g
-				// let result = str.replace(ze,function(_,c){
-				// 	console.log(_,c)
-				// 	return c.toUpperCase()
+				// let result = str.split('_').reduce((p,n,i,arr)=>{
+				// 	n = n[0].toUpperCase()+n.slice(1)
+				// 	return p + n
 				// })
 				// console.log(result)
+			// 3. 正则
+				// replace 的回调函数 有三个参数 匹配到的内容 下标 原字符串
+				// 如果有组匹配 有四个参数 匹配到的内容 组匹配返回的内容 下标 原字符串
+				// let str = "my_name_is_sxq";
+				// let ze = /_(\w)/g
+				// let result = str.replace(ze,function(_,a){
+				// 	console.log(arguments,_,a)
+				// 	return a.toUpperCase()
+				// })
+				// console.log(result)
+				var str = "aldwweefwealdcwefwefalddqwed";
+				var num = 0;
+				var aa = str.replace(/ald/g,(a,b)=>{
+					num++
+					console.log(a,b)
+				});
+				console.log(num)
+				// console.log(aa)
 			// 4. 正则封装 vue源码
 				// function cached (fn) {
 				//     var cache = Object.create(null);
@@ -405,8 +420,535 @@
 		// 同步异步区别
 			// 执行顺序
 			// 异步不需要等待
+			
 		// es6的map和对象的区别
 		
+		// 阻止 a 标签跳转
+			// <a href="javascript:;">点我!</a>
+			// <a href="#">点我!</a>
+			// return false
+			// e.preventDefault()
+		
+		// document onload 和document ready的区别
+			// Document.onload 是在结构和样式加载完才执行js
+			// window.onload：不仅仅要在结构和样式加载完，还要执行完所有的样式、图片这些资源文件，全部加载完才会触发window.onload事件 
+				// 会发生冲突 会覆盖
+			// Document.ready原生种没有这个方法，jquery中有 $().ready(function)
+				// dom文档树加载完之后执行一个函数
+				// 不会发生冲突
+				// 可以写多个
+		
+		// javascript的本地对象，内置对象和宿主对象
+			// 本地对象为array obj regexp等可以new实例化
+				// 独立于宿主环境的 ECMAScript 实现提供的对象
+			// 内置对象为global Math 是已经被实例化的
+				// 由 ECMAScript 实现提供的、独立于宿主环境的所有对象，在 ECMAScript 程序开始执行时出现
+			// 宿主为浏览器自带的document,window，BOM，DOM 等
+				// 由ECMAScript实现的宿主环境提供的对象，可以理解为：浏览器提供的对象。所有的BOM和DOM都是宿主对象。
+		
+		// window.location.hash 返回的是什么
+			// 锚点
+		
+		// javascript 中的垃圾回收机制？
+   			// 在Javascript中，如果一个对象不再被引用，那么这个对象就会被GC回收。如果两个对象互相引用，而不再  被第3者所引用，那么这两个互相引用的对象也会被回收。因为函数a被b引用，b又被a外的c引用，这就是为什么  函数a执行后不会被回收的原因。
+   			
+		// defer和async
+			// script 标签中如果都不加 则同步执行
+			// 加 async <script async src='...' /> 外部文件会和当前代码同时加载并执行
+			// defer 不同的是同时加载但是要执行完内部代码 才执行 引入文件
+			
+		// ajax缺点
+			// back 和 history对浏览器机制的破坏
+			// 安全问题 没有加密 容易被黑客攻击
+			// 对移动设备兼容不好
+			// 原生js各大浏览器兼容性不好
+			// 增加Web服务器的负载-如果你增加一个自动更新的功能，它每隔几秒向服务发起请求，那么就会增加服务器的负载
+			// 无刷新重载
+			// 数据类型需要手动转换
+			// 操作繁琐
+	
+		// $router 和 $route 的区别
+			// $route 只读
+			// $router 只写 是VueRouter的一个对象
+			
+		// promise 和 async 的区别
+			// async/await是写异步代码的新方式，以前的方法有回调函数和Promise。
+			// async/await是基于Promise实现的，它不能用于普通的回调函数。
+			// async函数会隐式地返回一个promise，该promise的reosolve值就是函数return的值。
+			// 不需要写.then
+			// Async/Await让try/catch可以同时处理同步和异步错误
+			
+		// 哪些操作会造成内存泄漏
+			// 闭包
+			// 递归
+			// 定时器
+			// 全局变量大量声明
+			// 大量拼接字符串
+			// 构造函数的不规范调用
+		
+		// generator 生成器
+			
+		// ajax
+			// 0 请求未初始化 当前请求数据包已经设置好但未初始化
+			// 1 建立和后台的连接 open
+			// 2 请求已发送，后台接到请求 send
+			// 3 后台处理请求
+			// 4 后台已经响应 前端可以接受数据
+			
+		// 避免重名
+			// git
+			// let
+			// 面向对象
+			// 命名空间
+			// 封闭空间
+			// js模块化mvc（数据层、表现层、控制层）
+			// seajs
+			// 变量转换成对象的属性
+			// 对象化
+		
+		// 减少页面加载时间的方法
+			// 减少http请求
+			// 压缩代码
+			// 少用本地图片
+			// 域名发散
+			// 懒加载
+			// 减少dom操作
+		
+		// js 继承的方法
+			// 原型链继承 object.create()
+			// 构造函数继承
+			// 混合继承
+			// 替换原型继承
+			// 寄生式继承
+			// 寄生组合式继承（常用）
+			// extend继承
+		
+		// jQuery 对象和原生 Dom 对象有什么区别
+			// jQuery 对象 伪数组
+			// 链式调用
+			// 隐式迭代
+			
+		// jQuery的优化方法
+			// 优先使用ID选择器
+			// jquery获取到的DOM元素如果需要多次使用，建议使用一个变量将其保存起来，因为操作DOM的过程是非常耗费性能的
+			// 在class前使用tag(标签名)
+			// 给选择器一个上下文
+			// 慎用 .live()方法（应该说尽量不要使用）
+			// 使用data()方法存储临时变量
+			// 设置入口函数
+			// 适当使用链式
+			// 事件委托绑定事件
+			
+		// jq.extend 和 jq.fn().extend 区别
+			// 两者调用方式不同：
+			// jQuery.extend(),一般由传入的全局函数来调用，主要是用来拓展个全局函数，如$.init()，$.ajax();
+			// jQuery.fn.extend(),一般由具体的实例对象来调用，可以用来拓展个选择器，例如$.fn.each();
+			// 两者的主要功能作用不同：
+			// jQuery.extend(object); 为扩展jQuery类本身，为自身添加新的方法。
+			// jQuery.fn.extend(object);给jQuery对象添加方法
+			// 大部分插件都是用jQuery.fn.extend()
+
+		// 标签函数
+			// function a(){} a``
+
+		// for of 三个属性 不能循环对象
+			// values 默认
+			// keys 
+			// entries(全部) 可以解构赋值 
+
+		// js中的强制类型转换 和 隐式类型转换
+			// 隐式类型转换 == +"" *1 ...
+			// 强制类型转换 String Number parseInt ...
+		
+		// jsonp原理
+			// 通过src向后台发送一个回调函数 后台会以实参的形式给前端响应数据
+			
+		// 事件循环的微任务 和 宏任务
+			// 微任务和宏任务皆为异步任务，但是微任务的优先级高于宏任务。
+			// 主线程会在同步任务做完后先清空微任务队列，再执行宏任务队列。
+			// 微任务（micro-task） promise catch finally MutationObserver
+			// 宏任务（macro-task） setTimeout setInterval setImmediate requestAnimationFrame
+
+		// overflow 的 兄弟元素
+			// overflow-x
+			// overflow-y
+			
+		// 为什么 get 比 post 高效 他们的请求过程
+			// get 可以缓存
+			// post比get 多了请求头 服务器响应
+		
+		// axios 和 fetch 的区别和优缺点
+			// fetch
+			// try {
+			//   let response = await fetch(url);
+			//   let data = response.json();
+			//   console.log(data);
+			// } catch(e) {
+			//   console.log("Oops, error", e);
+			// }
+			
+		// dom 元素 property 和 attribute 区别
+			// property 只读 是DOM中的属性，是JavaScript里的对象
+			// attribute 可设置 可自定义属性 是HTML标签上的特性，它的值只能够是字符串；
+
+		// 域名发散与域名收敛
+			// 2000-2010 PC 有线网
+			// 2010- 移动 移动/无线网 
+		
+		// ajax原理
+			// dns解析
+			// tcp三次握手
+			// ajax建立前后端连接
+			// 发送请求
+			// 服务器处理请求
+			// 响应
+			
+    			// 安全性低 post比较贴近http底层操作 会暴露与服务器的交互过程
+			// get 2000b-8000b post 无限制
+			
+		// json
+		
+		// console.log('aa')
+		// setTimeout(function(){
+		// 	console.log('1')
+		// 	new Promise(function(resolve){
+		// 		console.log("2")
+		// 		resolve()
+		// 	}).then(function(){
+		// 		console.log('3')
+		// 	})
+		// })//任务队列1
+		// new Promise(function(resolve){
+		// 	console.log("4")
+		// 	resolve()
+		// }).then(function(){
+		// 	console.log("5")
+		// })
+		// console.log("6")
+		// setTimeout(function(){ 
+		// 	console.log("7")  
+		// 	new Promise(function(resolve){
+		// 		console.log("8")
+		// 		resolve()
+		// 	}).then(function(){
+		// 		console.log('9')
+		// 	})
+		// })
+
+		//4 6 5 1 2 3 7 8 9 
+
+		// 不大于10位的数字转大写汉字
+		// function DX(n) {
+	 //        if (!/^(0|[1-9]\d*)(\.\d+)?$/.test(n)) return "数据非法";
+	 //        var unit = "仟佰拾亿仟佰拾万仟佰拾元角分", str = "";
+	 //            n += "00";
+	 //        var p = n.indexOf('.');
+	 //        if (p >= 0)
+	 //            n = n.substring(0, p) + n.substr(p+1, 2);
+	 //            unit = unit.substr(unit.length - n.length);
+	 //        for (var i=0; i < n.length; i++)
+	 //            str += '零壹贰叁肆伍陆柒捌玖'.charAt(n.charAt(i)) + unit.charAt(i);
+	 //        console.log(str,'---')
+	 //        return str.replace(/零(仟|佰|拾|角)/g, "零").replace(/(零)+/g, "零").replace(/零(万|亿|元)/g, "$1").replace(/(亿)万|壹(拾)/g, "$1$2").replace(/^元零?|零分/g, "").replace(/元$/g, "元整");
+		// }
+		// console.log(DX(100))
+
+
+		// function getChinese(n){
+		// 	if (!/^(0|[1-9]\d*)$/.test(n)) return "数据非法";
+		// 	n += ""  
+		// 	var unit = "个拾佰仟万拾佰仟亿拾佰仟",num="零壹贰叁肆伍陆柒捌玖",str = "";
+		// 	if(n.length>unit.length) return `不能超过${unit.length}位`
+		// 	for (var i=0;i<n.length;i++) str += num[n[i]] + unit[n.length-1-i];
+		// 	// $1,$2... 表示 匹配结果中对应分组匹配的结果
+		// 	// console.log(str)
+	 //        return str.replace(/零(仟|佰|拾|个)/g,"零").replace(/(零)+/g,"零").replace(/零(万|亿)/g, "$1").replace(/(亿)万|壹(拾)/g, "$1$2").replace(/(零|个)$/g,"");
+		// }
+		// console.log(getChinese(111111111))
+		
+
+
+		// var arrs = [1,45,2,6,2,6,9,10];
+		// var arr1 = []
+		// arrs.map((item,i,arr)=>{
+		// 	let max = Math.max(...arr)
+		// 	let index = arr.indexOf(max)
+		// 	console.log(arr,arr1,max)
+		// 	arrs.splice(index,1)
+		// 	arr1.unshift(max)
+		// 	console.log(arr,arr1,max)
+		// })
+		// console.log(arr1)
+		
+		// js 三种弹窗
+			// alert()方法，confirm()方法，prompt()方法
+			
+		// node的底层原理
+			// v8引擎 解析 js
+			// 解析后的代码 调用 node api
+			// libuv库负责 node APi 的执行。它将不同的任务分配给不同的线程，形成一个 Event loop（事件循环），以异步的方式将任务的执行结果返回给 v8 引擎。
+
+
+		// js 执行过程
+			// 全局扫描
+			// 预编译
+				// 1. 创建 GO（Global Object）/AO（Active Object） 对象
+				// 2. 找形参和变量声明，将变量和形参名作为AO的属性名，值为 undefined
+				// 3. 将实参值和形参值统一
+				// 4. 在函数体里面找函数声明，赋值于函数体。
+			// 解释执行
+
+		// 事件三个阶段
+			// 捕获
+			// 目标
+			// 冒泡
+		
+		// 函数声明与函数表达式的区别	冒泡
+
+		// DOM0级事件处理和DOM2级事件处理
+			// 0
+				// 一是在标签内写onclick事件
+				// 二是在JS写onlicke=function（）{}函数
+			// 2
+				// 事件监听
+
+		// 会话跟踪
+			// cookie
+			// session
+			// url重写
+			// 隐藏的表单域
+
+		// 一次js请求，一般会有哪些缓存处理
+			// DNS缓存：短时间内多次访问某个网站，在限定时间内，不用多次访问DNS服务器。
+			// CDN缓存：内容分发网络（人们可以在就近的代售点取火车票了，不用非得到火车站去排队）
+			// 浏览器缓存：浏览器在用户磁盘上，对最新请求过的文档进行了存储。
+			// 服务器缓存：将需要频繁访问的Web页面和对象保存在离用户更近的系统中，当再次访问这些对象的时候加快了速度。 
+
+		// 6种遍历对象的方法
+			// for ... in 循环遍历对象自身的和继承的可枚举属性(不含Symbol属性).
+			// Object.keys(obj),返回一个数组,包括对象自身的(不含继承的)所有可枚举属性(不含Symbol属性).
+			// Object.getOwnPropertyNames(obj),返回一个数组,包含对象自身的所有属性(不含Symbol属性,但是包括不可枚举属性).
+			// Object.getOwnPropertySymbols(obj),返回一个数组,包含对象自身的所有Symbol属性.
+			// Reflect.ownKeys(obj),返回一个数组,包含对象自身的所有属性,不管属性名是Symbol或字符串,也不管是否可枚举.
+			// Reflect.enumerate(obj),返回一个Iterator对象,遍历对象自身的和继承的所有可枚举属性(不含Symbol属性),与for ... in 循环相同.
+
+		// 高内聚低耦合
+			// 内聚：块内联系
+			// 耦合：块间联系
+			// 高内聚：单一责任原则 一个模块负责一个功能
+			// 低耦合：模块与模块之间尽可能独立。减少模块之间的联系。
+			// 
+
+		// js 自定义事件
+			// createEvent
+			// initEvent
+			// dispathEvent
+
+		// 圣杯模式
+			// 在js继承时 如果想要改某属性时，如果这个属性在原型上，修改了会影响到别的实例。因此这个时候使用圣杯模式。
+			// 创建一个临时构造函数， 中间层代理
+			// function inherit(Target,Origin){
+            //创建中间层构造函数
+	        //     function Buffer(){}
+	        //     //把被继承父类的原型付给中间层构造函数
+	        //     Buffer.prototype = Origin.prototype;
+	        //     //把实例化的中间层构造函数生成的对象付给需要继承的目标类
+	        //     Target.prototype = new Buffer();
+	        //     //目标类构造函数指向欢原
+	        //     Target.prototype.constructor = Target;
+	        //     //定义目标类从哪继承
+	        //     Target.prototype.super_class = Origin;
+	        // }
+		
+		// 浏览器的标准模式 和 怪异模式
+			// 标准模式
+				// 浏览器按照 W3C标准执行
+			// 怪异模式
+				// 浏览器按照自己的标准执行
+	
+		// 单页面应用和多页面应用到的区别
+			// 
+
+		// 前端HTML5几种存储方式的总结 https://www.cnblogs.com/LuckyWinty/p/5699117.html
+			// 本地存储localstorage
+			// 本地存储sessionstorage
+			// 离线缓存（application cache）
+			// Web SQL
+			// IndexedDB
+			
+		// ajax 和 fetch
+			// 1、fetch()返回的promise将不会拒绝http的错误状态，即使响应是一个HTTP 404或者500 
+			// 2、在默认情况下 fetch不会接受或者发送cookies
+			// fetch 的问题
+			// 1、所有的IE浏览器都不会支持 fetch()方法
+			// 2、服务器端返回 状态码 400 500的时候 不会reject
+			
+		// js操作类名
+			// 添加：节点.classList.add("类名")；
+			// 删除：节点.classList.remove("类名")；
+		
+		// 去除字符串中的空格；
+			// var str = '  12 3  ';
+			// str = str.replace(/[' ']+/img,'');
+			// console.log(str)
+		
+		// function foo(a){
+		// 	var a;
+		// 	return a;
+		// }
+		// function bar(a){
+		// 	var a;
+		// 	var a = 'bye';
+		// 	return a;
+		// }
+		// console.log(foo('hello'))
+		// console.log(bar('hello'))
+
+		// 有10个台阶，一次可以上一阶或两阶，打印所有方式
+			// n阶方式 = n-1阶方式 + n-2阶方式
+			// function step(n){
+			// 	if (n == 1) return 1;
+		 //        if (n == 2) return 2;
+		 //        else return step(n - 1) + step(n - 2)
+			// }
+		 //    console.log(step(10)) 
+
+
+		 // for(var i=0,j=0;i<10,j<6;i++,j++){
+		 // 	console.log(i,j)
+		 // 	k = i+j
+		 // }
+		 // console.log(k)// 10
+		 
+		 // setTimeout(()=>{
+		 // 	console.log(1)
+		 // },0)
+		 // const promise = new Promise((resolve,reject)=>{
+		 // 	console.log(2)
+		 // 	resolve()
+		 // 	console.log(3)
+		 // })
+		 // promise.then(()=>{
+		 // 	console.log(4)
+		 // })
+		 // console.log(5)
+		 
+		 // function ranNum(){
+		 	// return Math.floor(97+Math.random()*26)
+		 // }
+		 // var arr = [];
+		 // while(arr.length!==16){
+		 	// let RanNum = ranNum();
+		 	// let flag = arr.find(item=>item==RanNum);
+		 	// if(flag==undefined){
+		 		// arr.push(RanNum)
+		 	// }
+		 // }
+		 // arr = arr.reduce((prev,next)=>{
+		 	// return prev+String.fromCharCode(next);
+		 // },'')
+		 // console.log(arr)
+		 
+		// var a = 8
+		// let r = 9
+		// let b = r==9||4
+		// console.log(b)
+		
+		// var data = []
+		// for(let k=0;k<3;k++){
+		// 	data[k] = function(){
+		// 		console.log(k)
+		// 	}
+		// }
+		// data[0]()
+		// data[1]()
+		// data[2]()
+		
+		// var arr = [1,2,3,4];
+		// delete arr[1];
+		// arr.splice(1,1);
+		// console.log(arr,[arr[1]])
+		
+		// function jie(n){
+		// 	if(n==1){
+		// 		return 1;
+		// 	}
+		// 	return n*jie(n-1);
+		// }
+		// console.log(jie(4))
+		
+		// var arr = ['aaa','b','cccc','dd'];
+		// for(var i=0;i<arr.length-1;i++){
+		// 	for(var j=i;j<arr.length;j++){
+		// 		if(arr[i].length>arr[j].length){
+		// 			var temp = arr[i];
+		// 			arr[i] = arr[j];
+		// 			arr[j] = temp;
+		// 		}
+		// 	}
+		// }
+		// console.log(arr)
+		
+		// function deepClone(obj){
+		// 	if(typeof obj!=='object')return obj;
+		// 	if(obj == null)return null;
+		// 	if(obj instanceof RegExp)return new RegExp();
+		// 	if(obj instanceof Date)return new Date();
+		// 	let cloneObj = new obj.constructor();
+		// 	for(var key in obj){
+		// 		cloneObj[key] = typeof obj[key]=='object'?deepClone(obj[key]):obj[key];
+		// 	}
+		// 	return cloneObj;
+		// }
+		// let obj = {
+		// 	a:null,
+		// 	b:function(){console.log(11)},
+		// 	c:/adc$/,
+		// 	d:[1,2,3,4]
+		// }
+		// let cloneObj = deepClone(obj)
+		// obj.d = 1
+		// console.log(cloneObj)
+		
+
+		// function fn(){
+		// 	return this.names;
+		// }
+		// var obj = {
+		// 	names:'obj',
+		// 	fn:fn
+		// };
+		// console.log(fn()) ; 
+		// // this的指向
+		// console.log(obj.fn());
+		// // this的指向
+		// var fn2 = obj.fn;
+		// console.log(fn2());
+
+		// try{
+		// 	console.log(1);
+		// 	setTimeout(()=>{
+		// 		console.log(2);
+		// 	},100);
+		// 	setTimeout(()=>{
+		// 		console.log(3);
+		// 		throw new Error(5);
+		// 	});
+		// 	console.log(4);
+		// }catch(e){
+		// 	console.log(e)
+		// }
+
+
+		// 单线程 多线程  线程 进程
+			// 进程 任务 可以分配 cpu 也可以不分配
+			// 单线程 一条流水线
+			// 多线程 多条流水线 会有并发问题
+
+		// common.js
+			// js 模块化 common.js es6
+
+
 	</script>
 </body>
 </html>
